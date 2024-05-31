@@ -1,13 +1,13 @@
-import './App.css';
 import React from 'react';
 import LogoAnimation from './components/LogoAnimation';
 
-const App = () => {
+function App() {
   return (
-    <div>
+    <div className="App">
       <LogoAnimation />
+      {/* main page content can go here */}
     </div>
   );
-};
+}
 
 export default App;
