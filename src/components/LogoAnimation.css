@@ -29,10 +29,15 @@
   
   .R-logo {
     animation-delay: 0s;
+    z-index: 1; /* Ensure R is below J */
+    right: 140px;
+    bottom: 60px;
   }
   
   .J-logo {
-    animation-delay: 0.7s; /* Delay the appearance of the J logo */
+    animation-delay: 0.4s; /* Delay the J */
+    right: 135px;
+    bottom: 60px;
   }
   
   @keyframes appear {
