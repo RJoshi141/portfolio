@@ -1,6 +1,7 @@
 .portfolio-container {
     padding: 20px;
-    color: white; /* Set text color to white */
+    color: white;
+    background-color: black; /* Set a background color temporarily */
 }
 
 .intro-container {
