@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
     opacity: 1;
 }
 
@@ -24,14 +24,14 @@
 .R-logo {
     animation-delay: 0s;
     z-index: 1; /* Ensure R is below J */
-    right: 100px;
-    bottom: 50px;
+    right: -20px;
+    bottom: -10px;
 }
 
 .J-logo {
-    animation-delay: 0.8s; /* Delay the J */
-    right: 95px;
-    bottom: 50px;
+    animation-delay: 1; /* Delay the J */
+    right: -25px;
+    bottom: -10px;
 }
 
 @keyframes appear {
