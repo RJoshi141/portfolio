@@ -7,7 +7,7 @@ const LogoAnimation = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setAnimationCompleted(true);
-        }, 4000); // Total duration of the animation (in milliseconds)
+        }, 3000); // Total duration of the animation (in milliseconds)
         return () => clearTimeout(timer);
     }, []);
 
