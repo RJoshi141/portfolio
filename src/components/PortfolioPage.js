@@ -5,7 +5,15 @@ const PortfolioPage = () => {
     return (
         <div className="portfolio-container">
             <img src={`${process.env.PUBLIC_URL}/Logo.png`} className="top-left-logo" alt="Logo" />
-            {/* Add your buttons and links here */}
+            <div className="black-screen">
+                <div className="intro-container">
+                    <div className="intro-text">
+                        <p>Hi there! My name is</p>
+                        <h1>Ritika Joshi</h1>
+                    </div>
+                    {/* Add your buttons and links here */}
+                </div>
+            </div>
         </div>
     );
 };
