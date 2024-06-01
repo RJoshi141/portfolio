@@ -8,7 +8,7 @@ const LogoAnimation = ({ onAnimationComplete }) => {
         const timer = setTimeout(() => {
             setAnimationCompleted(true);
             onAnimationComplete(); // Notify parent component when animation completes
-        }, 2500); // Total duration of the animation (in milliseconds)
+        }, 2000); // Total duration of the animation (in milliseconds)
         return () => clearTimeout(timer);
     }, [onAnimationComplete]);
 

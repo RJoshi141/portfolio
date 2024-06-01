@@ -1,7 +1,7 @@
 .top-left-logo {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 50px;
+    left: 60px;
     width: 25px; 
     z-index: 30; /* above the new black screen */
 }
