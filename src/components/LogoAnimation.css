@@ -1,53 +1,51 @@
-/* LogoAnimation.css */
 .black-screen {
     background-color: black;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .black-screen.hide {
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  .logo-container {
+}
+
+.logo-container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .logo {
+    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
+}
+
+.logo {
     width: 30px; /* Adjust the size as needed */
-    opacity: 0;
     position: absolute;
     animation: appear 2s forwards;
-  }
-  
-  .R-logo {
+}
+
+.R-logo {
     animation-delay: 0s;
     z-index: 1; /* Ensure R is below J */
-    right: 140px;
-    bottom: 60px;
-  }
-  
-  .J-logo {
-    animation-delay: 0.4s; /* Delay the J */
-    right: 135px;
-    bottom: 60px;
-  }
-  
-  @keyframes appear {
+    right: 100px;
+    bottom: 50px;
+}
+
+.J-logo {
+    animation-delay: 0.8s; /* Delay the J */
+    right: 95px;
+    bottom: 50px;
+}
+
+@keyframes appear {
     0% {
-      opacity: 0;
-      transform: scale(0.5);
+        opacity: 0;
+        transform: scale(0.5);
     }
     100% {
-      opacity: 1;
-      transform: scale(1);
+        opacity: 1;
+        transform: scale(1);
     }
-  }
-  
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
