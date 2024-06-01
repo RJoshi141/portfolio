@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import './LogoAnimation.css'; // Import CSS styles for animation
 
-const LogoAnimation = () => {
+const LogoAnimation = ({ onAnimationComplete }) => {
     const [animationCompleted, setAnimationCompleted] = useState(false);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setAnimationCompleted(true);
+            onAnimationComplete(); // Notify parent component when animation completes
         }, 3000); // Total duration of the animation (in milliseconds)
         return () => clearTimeout(timer);
-    }, []);
+    }, [onAnimationComplete]);
 
     return (
         <div className="black-screen">

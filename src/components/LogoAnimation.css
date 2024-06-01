@@ -16,7 +16,7 @@
 }
 
 .logo {
-    width: 30px; /* Adjust the size as needed */
+    width: 25px; /* Adjust the size as needed */
     position: absolute;
     animation: appear 2s forwards;
 }
