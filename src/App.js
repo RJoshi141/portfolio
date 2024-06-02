@@ -11,11 +11,10 @@ function App() {
 
   return (
     <div className="App">
-      <LogoAnimation onAnimationComplete={handleAnimationComplete} />
+      {!animationCompleted && <LogoAnimation onAnimationComplete={handleAnimationComplete} />}
       {animationCompleted && <PortfolioPage />}
     </div>
   );
 }
 
 export default App;
-

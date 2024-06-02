@@ -10,13 +10,14 @@
     position: relative; /* child elements with absolute positioning are relative to this container */
 }
 
-.black-screen {
+.black-screen-portfolio {
     background-color: black;
     height: 100vh;
     width: 100%; /* fill the entire viewport */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align items to the start (left side) */
     align-items: center;
+    padding-left: 60px; /* Adjust as needed to add some padding from the left side */
     position: absolute; 
     top: 0; 
     left: 0; 
@@ -24,8 +25,15 @@
 }
 
 .intro-container {
-    text-align: center; /* Center align text */
+    position: relative;
+    top: -80px; /* Move up by 20px */
+    left: 90px; /* Move right by 20px */
+    text-align: left; /* Left align text */
     color: white; /* Set text color to white */
+}
+
+.intro-text {
+    color: rgba(255, 255, 255, 0.5); /* Faded white color */
 }
 
 .intro-text p {
@@ -34,7 +42,20 @@
     margin: 0; /* Remove default margin */
 }
 
-.intro-text h1 {
+.intro-text .intro-name {
     color: white; /* Color for "Ritika Joshi" */
     margin: 0; /* Remove default margin */
+    font-size: 60px; /* Increase font size */
+}
+
+.intro-tagline {
+    color: #adb5bd; /* Faded white color */
+    font-size: 60px; /* Adjust the font size as needed */
+    margin: 0; /* Remove default margin */
+
+}
+
+.intro-tagline1{
+    color: #8D959D !important; /* Faded white color */
+    font-size: 15px; /* Adjust the font size as needed */
 }
