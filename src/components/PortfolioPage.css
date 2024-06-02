@@ -1,9 +1,20 @@
 .top-left-logo {
     position: absolute;
-    top: 50px;
+    top: 50px; /* Initial position */
     left: 60px;
-    width: 25px; 
-    z-index: 30; /* above the new black screen */
+    width: 25px;
+    z-index: 30;
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeIn 1.5s ease forwards; /* Apply fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* Fade in to full opacity */
+    }
 }
 
 .portfolio-container {
@@ -30,19 +41,84 @@
     left: 90px; /* Move right by 20px */
     text-align: left; /* Left align text */
     color: white; /* Set text color to white */
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeInFromTop 1s forwards; /* Apply fade-in animation */
+}
+
+.intro-text, .intro-name, .intro-tagline, .intro-tagline1 {
+    opacity: 0; /* Start with opacity 0 */
 }
 
 .intro-text {
-    color: rgba(255, 255, 255, 0.5); /* Faded white color */
+    animation: fadeInText 0.5s forwards 0.6s; 
 }
 
-.intro-text p {
-    color: #1EFFF1; /* Color for "Hi there! My name is" */
+.intro-name {
+    animation: fadeInName 0.5s forwards 0.7s; 
+}
+
+.intro-tagline {
+    animation: fadeInTagline 0.5s forwards 0.8s; 
+}
+
+.intro-tagline1 {
+    animation: fadeInTagline1 0.5s forwards 0.9s; /* Delay by 0.7s */
+}
+
+@keyframes fadeInFromTop {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+        transform: translateY(-20px); /* Move up by 20px */
+    }
+    100% {
+        opacity: 1; /* Fade in to full opacity */
+        transform: translateY(0); /* Move up to original position */
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    100% {
+        opacity: 1; /* Fade in to full opacity */
+    }
+}
+
+@keyframes fadeInName {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    100% {
+        opacity: 1; /* Fade in to full opacity */
+    }
+}
+
+@keyframes fadeInTagline {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    100% {
+        opacity: 1; /* Fade in to full opacity */
+    }
+}
+
+@keyframes fadeInTagline1 {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    100% {
+        opacity: 1; /* Fade in to full opacity */
+    }
+}
+
+.intro-text {
+    color: #1EFFF1 !important; /* Color for "Hi there! My name is" */
     font-family: 'SF Mono', monospace; /* Apply SF Mono font */
     margin: 0; /* Remove default margin */
 }
 
-.intro-text .intro-name {
+.intro-name {
     color: white; /* Color for "Ritika Joshi" */
     margin: 0; /* Remove default margin */
     font-size: 60px; /* Increase font size */
@@ -52,10 +128,11 @@
     color: #adb5bd; /* Faded white color */
     font-size: 60px; /* Adjust the font size as needed */
     margin: 0; /* Remove default margin */
-
 }
 
 .intro-tagline1{
     color: #8D959D !important; /* Faded white color */
     font-size: 15px; /* Adjust the font size as needed */
+    font-family: 'SF Mono', monospace; /* Apply SF Mono font */
+
 }
