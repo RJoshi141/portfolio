@@ -113,26 +113,26 @@
 }
 
 .intro-text {
-    color: #1EFFF1 !important; /* Color for "Hi there! My name is" */
-    font-family: 'SF Mono', monospace; /* Apply SF Mono font */
-    margin: 0; /* Remove default margin */
+    color: #1EFFF1 !important; /* for "Hi there! My name is" */
+    font-family: 'SF Mono', monospace; 
+    margin: 0; 
 }
 
 .intro-name {
-    color: white; /* Color for "Ritika Joshi" */
-    margin: 0; /* Remove default margin */
-    font-size: 60px; /* Increase font size */
+    color: white; /* for "Ritika Joshi" */
+    margin: 0; 
+    font-size: 60px; 
 }
 
 .intro-tagline {
     color: #adb5bd; /* Faded white color */
-    font-size: 60px; /* Adjust the font size as needed */
-    margin: 0; /* Remove default margin */
+    font-size: 60px; 
+    margin: 0; 
 }
 
 .intro-tagline1{
     color: #8D959D !important; /* Faded white color */
-    font-size: 15px; /* Adjust the font size as needed */
+    font-size: 15px; 
     font-family: 'SF Mono', monospace; /* Apply SF Mono font */
 
 }
