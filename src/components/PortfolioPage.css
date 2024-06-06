@@ -1,3 +1,8 @@
+/* PortfolioPage.css */
+.portfolio-container {
+    position: relative; /* Child elements with absolute positioning are relative to this container */
+}
+
 .top-left-logo {
     position: absolute;
     top: 50px; /* Initial position */
@@ -6,25 +11,35 @@
     z-index: 30;
     opacity: 0; /* Start with opacity 0 */
     animation: fadeIn 1.5s ease forwards; /* Apply fade-in animation */
+    transition: filter 0.1s, transform 0.1s; /* Add transition for hover and click effects */
+    cursor: pointer; /* Make the logo a pointer on hover */
+}
+
+.top-left-logo:hover {
+    filter: brightness(0.5); /* Lighten the logo on hover */
+}
+
+.top-left-logo:active {
+    animation: logo-click 0.1s ease-in-out; /* Apply click animation */
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0; /* Start with opacity 0 */
-    }
+        opacity: 0; }
     to {
-        opacity: 1; /* Fade in to full opacity */
-    }
+        opacity: 1; }
 }
 
-.portfolio-container {
-    position: relative; /* child elements with absolute positioning are relative to this container */
+@keyframes logo-click {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
 }
 
 .black-screen-portfolio {
     background-color: black;
     height: 100vh;
-    width: 100%; /* fill the entire viewport */
+    width: 100%; /* Fill the entire viewport */
     display: flex;
     justify-content: flex-start; /* Align items to the start (left side) */
     align-items: center;
@@ -37,16 +52,16 @@
 
 .intro-container {
     position: relative;
-    top: -80px; /* Move up by 20px */
-    left: 90px; /* Move right by 20px */
+    top: -80px; 
+    left: 90px; 
     text-align: left; /* Left align text */
-    color: white; /* Set text color to white */
-    opacity: 0; /* Start with opacity 0 */
+    color: white; 
+    opacity: 0; 
     animation: fadeInFromTop 1s forwards; /* Apply fade-in animation */
 }
 
 .intro-text, .intro-name, .intro-tagline, .intro-tagline1 {
-    opacity: 0; /* Start with opacity 0 */
+    opacity: 0; 
 }
 
 .intro-text {
@@ -62,7 +77,7 @@
 }
 
 .intro-tagline1 {
-    animation: fadeInTagline1 0.5s forwards 0.9s; /* Delay by 0.7s */
+    animation: fadeInTagline1 0.5s forwards 0.9s; /* Delay by 0.9s */
 }
 
 @keyframes fadeInFromTop {
@@ -105,10 +120,10 @@
 
 @keyframes fadeInTagline1 {
     0% {
-        opacity: 0; /* Start with opacity 0 */
+        opacity: 0; 
     }
     100% {
-        opacity: 1; /* Fade in to full opacity */
+        opacity: 1; 
     }
 }
 
@@ -130,9 +145,30 @@
     margin: 0; 
 }
 
-.intro-tagline1{
+.intro-tagline1 {
     color: #8D959D !important; /* Faded white color */
     font-size: 15px; 
     font-family: 'SF Mono', monospace; /* Apply SF Mono font */
+}
 
+
+.navigation-links {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    display: flex;
+    gap: 20px;
+    z-index: 30;
+}
+
+.navigation-links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'SF Mono', monospace;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navigation-links a:hover {
+    color: #1EFFF1; /* Light blue color on hover */
 }
