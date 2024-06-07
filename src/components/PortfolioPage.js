@@ -59,10 +59,10 @@ const PortfolioPage = () => {
                 <h2>Experience</h2>
                 <p>Your experience content goes here...</p>
             </section>
-            <section id="resume" className="section resume-section">
+            {/* <section id="resume" className="section resume-section">
                 <h2>Resume</h2>
                 <p>Your resume content goes here...</p>
-            </section>
+            </section> */}
         </div>
     );
 };
