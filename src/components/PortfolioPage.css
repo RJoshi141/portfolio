@@ -25,9 +25,11 @@
 
 @keyframes fadeIn {
     from {
-        opacity: 0; }
+        opacity: 0;
+    }
     to {
-        opacity: 1; }
+        opacity: 1;
+    }
 }
 
 @keyframes logo-click {
@@ -44,40 +46,53 @@
     justify-content: flex-start; /* Align items to the start (left side) */
     align-items: center;
     padding-left: 60px; /* Adjust as needed to add some padding from the left side */
-    position: absolute; 
-    top: 0; 
-    left: 0; 
+    position: relative; /* Change to relative to ensure it doesn’t overlap other sections */
+    top: 0;
+    left: 0;
     z-index: 20; /* Ensure it's above the old black screen */
 }
 
 .intro-container {
     position: relative;
-    top: -80px; 
-    left: 90px; 
+    top: -80px;
+    left: 90px;
     text-align: left; /* Left align text */
-    color: white; 
-    opacity: 0; 
+    color: white;
+    opacity: 0;
     animation: fadeInFromTop 1s forwards; /* Apply fade-in animation */
 }
 
 .intro-text, .intro-name, .intro-tagline, .intro-tagline1 {
-    opacity: 0; 
+    opacity: 0;
 }
 
 .intro-text {
-    animation: fadeInText 0.5s forwards 0.6s; 
+    animation: fadeInText 0.5s forwards 0.6s;
+    color: #1EFFF1 !important; /* for "Hi there! My name is" */
+    font-family: 'SF Mono', monospace;
+    font-size: 15px;
+    margin: 0;
 }
 
 .intro-name {
-    animation: fadeInName 0.5s forwards 0.7s; 
+    animation: fadeInName 0.5s forwards 0.7s;
+    color: white; /* for "Ritika Joshi" */
+    margin: 0;
+    font-size: 60px;
 }
 
 .intro-tagline {
-    animation: fadeInTagline 0.5s forwards 0.8s; 
+    animation: fadeInTagline 0.5s forwards 0.8s;
+    color: #adb5bd; /* Faded white color */
+    font-size: 60px;
+    margin: 0;
 }
 
 .intro-tagline1 {
     animation: fadeInTagline1 0.5s forwards 0.9s; /* Delay by 0.9s */
+    color: #adb5bd; /* Faded white color */
+    font-size: 15px;
+    font-family: 'SF Mono', monospace; /* Apply SF Mono font */
 }
 
 @keyframes fadeInFromTop {
@@ -120,37 +135,12 @@
 
 @keyframes fadeInTagline1 {
     0% {
-        opacity: 0; 
+        opacity: 0;
     }
     100% {
-        opacity: 1; 
+        opacity: 1;
     }
 }
-
-.intro-text {
-    color: #1EFFF1 !important; /* for "Hi there! My name is" */
-    font-family: 'SF Mono', monospace; 
-    margin: 0; 
-}
-
-.intro-name {
-    color: white; /* for "Ritika Joshi" */
-    margin: 0; 
-    font-size: 60px; 
-}
-
-.intro-tagline {
-    color: #adb5bd; /* Faded white color */
-    font-size: 60px; 
-    margin: 0; 
-}
-
-.intro-tagline1 {
-    color: #8D959D !important; /* Faded white color */
-    font-size: 15px; 
-    font-family: 'SF Mono', monospace; /* Apply SF Mono font */
-}
-
 
 .navigation-links {
     position: absolute;
@@ -166,9 +156,63 @@
     text-decoration: none;
     font-family: 'SF Mono', monospace;
     font-size: 16px;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
+    opacity: 0; /* Initially hide the links */
 }
 
+.navigation-links a:nth-child(1) {
+    animation: fadeInLink 0.1s forwards 0.2s;
+}
+
+.navigation-links a:nth-child(2) {
+    animation: fadeInLink 0.19s forwards 0.3s;
+}
+
+.navigation-links a:nth-child(3) {
+    animation: fadeInLink 0.29s forwards 0.4s; /* Delay the third link */
+}
+
+@keyframes fadeInLink {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Move up from 20px below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to the original position */
+    }
+}
 .navigation-links a:hover {
     color: #1EFFF1; /* Light blue color on hover */
+}
+
+/* General section styling */
+.section {
+    padding: 100px 60px; /* Adjust padding as needed */
+    color: white; /* White text color */
+    position: relative; /* Ensure sections are positioned relative to the page flow */
+    z-index: 10; /* Ensure sections are behind the black screen portfolio */
+    background-color: black; /* Set background to black */
+}
+
+/* Specific section styling */
+.about-section {
+    background-color: black; /* Set background to black */
+    padding-left: 150px; /* Match left padding with the intro-container */
+    padding-right: 90px; /* Optional: add right padding if needed */
+    
+}
+
+.about-section h1 {
+    text-align: left; /* Align text to the left */
+    font-size: 40px; /* Increase font size for "About" heading */
+}
+
+.about-section p {
+    text-align: left; /* Align text to the left */
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
 }
