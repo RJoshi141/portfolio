@@ -200,6 +200,14 @@
     background-color: black; /* Set background to black */
     padding-left: 150px; /* Match left padding with the intro-container */
     padding-right: 90px; /* Optional: add right padding if needed */
+    opacity: 0; /* Initially hide the section */
+    transform: translateY(20px); /* Initial position slightly below */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+.about-section.visible {
+    opacity: 1; /* Show the section */
+    transform: translateY(0); /* Move to original position */
 }
 
 .about-section h1 {
@@ -209,6 +217,70 @@
 
 .about-section p {
     text-align: left; /* Align text to the left */
+}
+
+.experience-section {
+    background-color: black; /* Set background to black */
+    padding-left: 150px; /* Match left padding with the intro-container */
+    padding-right: 90px; /* Optional: add right padding if needed */
+    opacity: 0; /* Initially hide the section */
+    transform: translateY(20px); /* Initial position slightly below */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+.experience-section h1 {
+    text-align: left;
+    font-size: 40px;
+}
+
+.experience-section.visible {
+    opacity: 1; /* Show the section */
+    transform: translateY(0); /* Move to original position */
+}
+
+.experience-menu {
+    width: 200px;
+    float: left;
+}
+
+.experience-item {
+    position: relative; /* Ensure relative positioning for absolute child */
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.experience-item.active {
+    color: #1EFFF1; /* Change font color of active item */
+}
+
+.experience-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover background color */
+}
+
+.line {
+    position: absolute;
+    left: -10px; /* Adjust as needed for positioning */
+    top: 50%; /* Center the line vertically */
+    transform: translateY(-50%); /* Adjust for vertical alignment */
+    width: 2px;
+    height: 0; /* Start with height 0 */
+    background-color: #1EFFF1; /* Color of the vertical line */
+    transition: transform 0.5s ease-out; /* Smooth transition for transform */
+}
+
+.experience-item.active .line {
+    height: 100%; /* Expand the vertical line to full height */
+    transform: translateY(-50%); /* Center the line vertically */
+}
+
+
+.experience-details {
+    margin-left: 220px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
 }
 
 /* Smooth scrolling */
