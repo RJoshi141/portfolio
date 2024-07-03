@@ -83,7 +83,7 @@ const PortfolioPage = () => {
                 <h1>Experience</h1> {/* Add this line for the header */}
                 <div className="experience-menu">
                     <div className={`experience-item ${activeExperience === 1 ? 'active' : ''}`} onClick={() => setActiveExperience(1)}>
-                        Experience 1
+                        Toyota Motors Manufacturing Kentucky
                         {activeExperience === 1 && <div className="line"></div>}
                     </div>
                     <div className={`experience-item ${activeExperience === 2 ? 'active' : ''}`} onClick={() => setActiveExperience(2)}>
@@ -96,9 +96,19 @@ const PortfolioPage = () => {
                     </div>
                 </div>
 
-
                 <div className="experience-details">
-                    {activeExperience === 1 && <p>Details about Experience 1</p>}
+                    {activeExperience === 1 && (
+                        <div>
+                            <h2>CS Production Control Co-op | TMMK Georgetown, KY</h2>
+                            <p className="experience-timeline">May 2023 – August 2023</p>
+                            <ul>
+                                <li>Improved the management process for supplier change requests (SCR) for each car model part number, aiming to enhance efficiency at Toyota's production control department</li>
+                                <li>Tasked with integrating the SCR App into the existing QPC Change Point Management interface using Power Apps to streamline the process and enhance data management</li>
+                                <li>Engineered a streamlined process for SCR changes, seamlessly integrating the SCR App into the interface while optimizing data management with SQL Servers and prioritizing UX/UI principles for enhanced usability</li>
+                                <li>Achieved a 34% increase in workflow efficiency, a 42% improvement in data retrieval speeds, and significantly boosted user satisfaction, benefiting over 5 cross-functional teams at North America's largest automotive plant</li>
+                            </ul>
+                        </div>
+                    )}
                     {activeExperience === 2 && <p>Details about Experience 2</p>}
                     {activeExperience === 3 && <p>Details about Experience 3</p>}
                 </div>
