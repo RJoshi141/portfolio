@@ -186,6 +186,7 @@
     color: #1EFFF1; /* Light blue color on hover */
 }
 
+
 /* General section styling */
 .section {
     padding: 100px 60px; /* Adjust padding as needed */
@@ -224,7 +225,7 @@
     padding-left: 150px; /* Match left padding with the intro-container */
     padding-right: 90px; /* Optional: add right padding if needed */
     opacity: 0; /* Initially hide the section */
-    transform: translateY(20px); /* Initial position slightly below */
+    transform: translateY(400px); /* Adjust translateY to 400px or any value that positions it correctly below About */
     transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
 }
 
