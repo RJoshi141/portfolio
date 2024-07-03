@@ -1,6 +1,8 @@
 /* PortfolioPage.css */
 .portfolio-container {
     position: relative; /* Child elements with absolute positioning are relative to this container */
+    background-color: black; /* Set a single black background for the entire container */
+    padding-bottom: 100vh; /* Ensure it extends beyond the viewport */
 }
 
 .top-left-logo {
@@ -39,7 +41,6 @@
 }
 
 .black-screen-portfolio {
-    background-color: black;
     height: 100vh;
     width: 100%; /* Fill the entire viewport */
     display: flex;
@@ -186,19 +187,16 @@
     color: #1EFFF1; /* Light blue color on hover */
 }
 
-
 /* General section styling */
 .section {
     padding: 100px 60px; /* Adjust padding as needed */
     color: white; /* White text color */
     position: relative; /* Ensure sections are positioned relative to the page flow */
     z-index: 10; /* Ensure sections are behind the black screen portfolio */
-    background-color: black; /* Set background to black */
 }
 
 /* Specific section styling */
 .about-section {
-    background-color: black; /* Set background to black */
     padding-left: 150px; /* Match left padding with the intro-container */
     padding-right: 90px; /* Optional: add right padding if needed */
     opacity: 0; /* Initially hide the section */
@@ -221,7 +219,6 @@
 }
 
 .experience-section {
-    background-color: black; /* Set background to black */
     padding-left: 150px; /* Match left padding with the intro-container */
     padding-right: 90px; /* Optional: add right padding if needed */
     opacity: 0; /* Initially hide the section */
@@ -275,7 +272,6 @@
     height: 100%; /* Expand the vertical line to full height */
     transform: translateY(-50%); /* Center the line vertically */
 }
-
 
 .experience-details {
     margin-left: 220px;
