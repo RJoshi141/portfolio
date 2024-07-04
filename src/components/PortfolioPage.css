@@ -1,28 +1,29 @@
 /* PortfolioPage.css */
+
 .portfolio-container {
-    position: relative; /* Child elements with absolute positioning are relative to this container */
-    background-color: black; /* Set a single black background for the entire container */
-    padding-bottom: 100vh; /* Ensure it extends beyond the viewport */
+    position: relative;
+    background-color: black;
+    padding-bottom: 100vh;
 }
 
 .top-left-logo {
     position: absolute;
-    top: 50px; /* Initial position */
+    top: 50px;
     left: 60px;
     width: 25px;
     z-index: 30;
-    opacity: 0; /* Start with opacity 0 */
-    animation: fadeIn 1.5s ease forwards; /* Apply fade-in animation */
-    transition: filter 0.1s, transform 0.1s; /* Add transition for hover and click effects */
-    cursor: pointer; /* Make the logo a pointer on hover */
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    transition: filter 0.1s, transform 0.1s;
+    cursor: pointer;
 }
 
 .top-left-logo:hover {
-    filter: brightness(0.5); /* Lighten the logo on hover */
+    filter: brightness(0.5);
 }
 
 .top-left-logo:active {
-    animation: logo-click 0.1s ease-in-out; /* Apply click animation */
+    animation: logo-click 0.1s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -35,32 +36,38 @@
 }
 
 @keyframes logo-click {
-    0% { transform: scale(1); }
-    50% { transform: scale(0.9); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .black-screen-portfolio {
     height: 100vh;
-    width: 100%; /* Fill the entire viewport */
+    width: 100%;
     display: flex;
-    justify-content: flex-start; /* Align items to the start (left side) */
+    justify-content: flex-start;
     align-items: center;
-    padding-left: 60px; /* Adjust as needed to add some padding from the left side */
-    position: relative; /* Change to relative to ensure it doesn’t overlap other sections */
+    padding-left: 60px;
+    position: relative;
     top: 0;
     left: 0;
-    z-index: 20; /* Ensure it's above the old black screen */
+    z-index: 20;
 }
 
 .intro-container {
     position: relative;
     top: -80px;
     left: 90px;
-    text-align: left; /* Left align text */
+    text-align: left;
     color: white;
     opacity: 0;
-    animation: fadeInFromTop 1s forwards; /* Apply fade-in animation */
+    animation: fadeInFromTop 1s forwards;
 }
 
 .intro-text, .intro-name, .intro-tagline, .intro-tagline1 {
@@ -69,7 +76,7 @@
 
 .intro-text {
     animation: fadeInText 0.5s forwards 0.6s;
-    color: #1EFFF1 !important; /* for "Hi there! My name is" */
+    color: #1EFFF1 !important;
     font-family: 'SF Mono', monospace;
     font-size: 15px;
     margin: 0;
@@ -77,60 +84,60 @@
 
 .intro-name {
     animation: fadeInName 0.5s forwards 0.7s;
-    color: white; /* for "Ritika Joshi" */
+    color: white;
     margin: 0;
     font-size: 60px;
 }
 
 .intro-tagline {
     animation: fadeInTagline 0.5s forwards 0.8s;
-    color: #adb5bd; /* Faded white color */
+    color: #adb5bd;
     font-size: 60px;
     margin: 0;
 }
 
 .intro-tagline1 {
-    animation: fadeInTagline1 0.5s forwards 0.9s; /* Delay by 0.9s */
-    color: #adb5bd; /* Faded white color */
+    animation: fadeInTagline1 0.5s forwards 0.9s;
+    color: #adb5bd;
     font-size: 15px;
-    font-family: 'SF Mono', monospace; /* Apply SF Mono font */
+    font-family: 'SF Mono', monospace;
 }
 
 @keyframes fadeInFromTop {
     0% {
-        opacity: 0; /* Start with opacity 0 */
-        transform: translateY(-20px); /* Move up by 20px */
+        opacity: 0;
+        transform: translateY(-20px);
     }
     100% {
-        opacity: 1; /* Fade in to full opacity */
-        transform: translateY(0); /* Move up to original position */
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
 @keyframes fadeInText {
     0% {
-        opacity: 0; /* Start with opacity 0 */
+        opacity: 0;
     }
     100% {
-        opacity: 1; /* Fade in to full opacity */
+        opacity: 1;
     }
 }
 
 @keyframes fadeInName {
     0% {
-        opacity: 0; /* Start with opacity 0 */
+        opacity: 0;
     }
     100% {
-        opacity: 1; /* Fade in to full opacity */
+        opacity: 1;
     }
 }
 
 @keyframes fadeInTagline {
     0% {
-        opacity: 0; /* Start with opacity 0 */
+        opacity: 0;
     }
     100% {
-        opacity: 1; /* Fade in to full opacity */
+        opacity: 1;
     }
 }
 
@@ -158,7 +165,7 @@
     font-family: 'SF Mono', monospace;
     font-size: 16px;
     transition: color 0.2s ease;
-    opacity: 0; /* Initially hide the links */
+    opacity: 0;
 }
 
 .navigation-links a:nth-child(1) {
@@ -170,60 +177,59 @@
 }
 
 .navigation-links a:nth-child(3) {
-    animation: fadeInLink 0.29s forwards 0.4s; /* Delay the third link */
+    animation: fadeInLink 0.29s forwards 0.4s;
 }
 
 @keyframes fadeInLink {
     0% {
         opacity: 0;
-        transform: translateY(-20px); /* Move up from 20px below */
+        transform: translateY(-20px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Move to the original position */
+        transform: translateY(0);
     }
 }
+
 .navigation-links a:hover {
-    color: #1EFFF1; /* Light blue color on hover */
+    color: #1EFFF1;
 }
 
-/* General section styling */
 .section {
-    padding: 100px 60px; /* Adjust padding as needed */
-    color: white; /* White text color */
-    position: relative; /* Ensure sections are positioned relative to the page flow */
-    z-index: 10; /* Ensure sections are behind the black screen portfolio */
+    padding: 100px 60px;
+    color: white;
+    position: relative;
+    z-index: 10;
 }
 
-/* Specific section styling */
 .about-section {
-    padding-left: 150px; /* Match left padding with the intro-container */
-    padding-right: 90px; /* Optional: add right padding if needed */
-    opacity: 0; /* Initially hide the section */
-    transform: translateY(20px); /* Initial position slightly below */
-    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+    padding-left: 150px;
+    padding-right: 90px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .about-section.visible {
-    opacity: 1; /* Show the section */
-    transform: translateY(0); /* Move to original position */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .about-section h1 {
-    text-align: left; /* Align text to the left */
-    font-size: 40px; /* Increase font size for "About" heading */
+    text-align: left;
+    font-size: 40px;
 }
 
 .about-section p {
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 .experience-section {
-    padding-left: 150px; /* Match left padding with the intro-container */
-    padding-right: 90px; /* Optional: add right padding if needed */
-    opacity: 0; /* Initially hide the section */
-    transform: translateY(400px); /* Adjust translateY to 400px or any value that positions it correctly below About */
-    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+    padding-left: 150px;
+    padding-right: 90px;
+    opacity: 0;
+    transform: translateY(400px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .experience-section h1 {
@@ -232,8 +238,8 @@
 }
 
 .experience-section.visible {
-    opacity: 1; /* Show the section */
-    transform: translateY(0); /* Move to original position */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .experience-menu {
@@ -242,41 +248,52 @@
 }
 
 .experience-item {
-    position: relative; /* Ensure relative positioning for absolute child */
+    position: relative;
     cursor: pointer;
     margin-bottom: 10px;
     padding: 10px;
     transition: background-color 0.3s, color 0.3s;
+    
 }
 
 .experience-item.active {
-    color: #1EFFF1; /* Change font color of active item */
+    color: #1EFFF1;
 }
 
 .experience-item:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Hover background color */
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .line {
     position: absolute;
-    left: -10px; /* Adjust as needed for positioning */
-    top: 50%; /* Center the line vertically */
-    transform: translateY(-50%); /* Adjust for vertical alignment */
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 2px;
-    height: 0; /* Start with height 0 */
-    background-color: #1EFFF1; /* Color of the vertical line */
-    transition: transform 0.5s ease-out; /* Smooth transition for transform */
+    height: 0;
+    background-color: #1EFFF1;
+    transition: transform 0.5s ease-out;
 }
 
 .experience-item.active .line {
-    height: 100%; /* Expand the vertical line to full height */
-    transform: translateY(-50%); /* Center the line vertically */
+    height: 100%;
+    transform: translateY(-50%);
+}
+
+.experience-heading {
+    margin-bottom: 20px;
+}
+
+.experience-heading h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .experience-timeline {
-    color: #adb5bd; /* Faded white color */
-    font-size: 14px; 
-    margin-bottom: 10px; /* Add some space below the timeline text */
+    color: #adb5bd;
+    font-size: 14px;
+    margin-bottom: 10px;
     font-family: 'SF Mono', monospace;
 }
 
@@ -288,8 +305,6 @@
 }
 
 
-
-/* Smooth scrolling */
 html {
-    scroll-behavior: smooth; /* Enable smooth scrolling */
+    scroll-behavior: smooth;
 }
