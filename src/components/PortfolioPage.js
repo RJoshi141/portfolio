@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './PortfolioPage.css';
+import resumePDF from '../assets/Ritika_Joshi_Resume.pdf'; // Import your resume PDF
 
 const PortfolioPage = () => {
     const reloadPage = () => {
@@ -16,10 +17,14 @@ const PortfolioPage = () => {
 
         if (aboutSection.getBoundingClientRect().top < window.innerHeight * 0.75) {
             aboutSection.classList.add('visible');
+        } else {
+            aboutSection.classList.remove('visible');
         }
 
         if (experienceSection.getBoundingClientRect().top < window.innerHeight * 0.75) {
             experienceSection.classList.add('visible');
+        } else {
+            experienceSection.classList.remove('visible');
         }
     };
 
@@ -29,6 +34,10 @@ const PortfolioPage = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const openResume = () => {
+        window.open(resumePDF, '_blank');
+    };
 
     return (
         <div className="portfolio-container">
@@ -42,7 +51,10 @@ const PortfolioPage = () => {
                 <nav className="navigation-links">
                     <a href="#about" className="nav-link">About</a>
                     <a href="#experience" className="nav-link">Experience</a>
-                    <a href="#resume" className="nav-link">Resume</a>
+                    <a href="#" className="resume-button" onClick={openResume}>
+                        Resume
+                    </a>
+
                 </nav>
             </div>
             <div className="black-screen-portfolio">
@@ -74,8 +86,16 @@ const PortfolioPage = () => {
                 <p className="intro-tagline1">
                     and learning experiences. I'm eager to bring my skills and enthusiasm to a dynamic team where
                 </p>
-                <p className="intro-text">
+                <p className="intro-tagline1">
                     I can continue to grow and make impactful contributions.
+                </p>
+
+                <p className="intro-tagline1">
+                    Beyond tech, I thrive in leadership roles. As a Senator-At-Large in the Undergraduate Student Government
+                    at the University of Cincinnati, I passionately advocated for student interests and initiatives, contributing to a vibrant campus community.
+                </p>
+                <p className="intro-tagline1">
+                    Fun fact: I had the honor of being the Student Commencement Speaker at my graduation, representing the Spring 2024 undergraduate class with an impactful address at all three graduation ceremonies.
                 </p>
             </section>
             <section id="experience" className="section experience-section" ref={experienceRef}>

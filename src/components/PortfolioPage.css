@@ -180,6 +180,18 @@
     animation: fadeInLink 0.29s forwards 0.4s;
 }
 
+/* Styles for Resume button */
+.navigation-links .resume-button {
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navigation-links .resume-button:hover {
+    transform: scale(1.05); /* Adjust hover effect */
+}
+
+
 @keyframes fadeInLink {
     0% {
         opacity: 0;
@@ -228,7 +240,7 @@
     padding-left: 150px;
     padding-right: 90px;
     opacity: 0;
-    transform: translateY(700px); /* Adjust initial translateY as needed */
+    transform: translateY(300px); /* Adjust initial translateY as needed */
     transition: opacity 1s ease-out, transform 1s ease-out; /* Keep the transition */
 }
 
