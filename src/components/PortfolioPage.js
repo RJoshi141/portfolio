@@ -86,50 +86,54 @@ const PortfolioPage = () => {
                         {activeExperience === 1 && <div className="line"></div>}
                     </div>
                     <div className={`experience-item ${activeExperience === 2 ? 'active' : ''}`} onClick={() => setActiveExperience(2)}>
-                        BECO VENTURES, Singapore
+                        BECO VENTURES Singapore
                         {activeExperience === 2 && <div className="line"></div>}
                     </div>
                     <div className={`experience-item ${activeExperience === 3 ? 'active' : ''}`} onClick={() => setActiveExperience(3)}>
-                        Experience 3
+                        P&G Cincinnati
                         {activeExperience === 3 && <div className="line"></div>}
                     </div>
                 </div>
+
                 <div className="experience-details">
                     {activeExperience === 1 && (
-                        <>
+                        <div>
                             <div className="experience-heading">
                                 <h2>CS Production Control Co-op | TMMK Georgetown, KY</h2>
                                 <p className="experience-timeline">May 2023 – August 2023</p>
                             </div>
-                            <ul>
+                            <ul className="experience-bullets">
                                 <li>Improved the management process for supplier change requests (SCR) for each car model part number, aiming to enhance efficiency at Toyota's production control department</li>
                                 <li>Tasked with integrating the SCR App into the existing QPC Change Point Management interface using Power Apps to streamline the process and enhance data management</li>
                                 <li>Engineered a streamlined process for SCR changes, seamlessly integrating the SCR App into the interface while optimizing data management with SQL Servers and prioritizing UX/UI principles for enhanced usability</li>
                                 <li>Achieved a 34% increase in workflow efficiency, a 42% improvement in data retrieval speeds, and significantly boosted user satisfaction, benefiting over 5 cross-functional teams at North America's largest automotive plant</li>
                             </ul>
-                        </>
+                        </div>
                     )}
                     {activeExperience === 2 && (
-                        <>
+                        <div>
                             <div className="experience-heading">
                                 <h2>UI Process Engineer Intern | BECO VENTURES, Singapore</h2>
                                 <p className="experience-timeline">September 2022 – December 2022</p>
                             </div>
-                            <ul>
+                            <ul className="experience-bullets">
                                 <li>Deployed both local and cloud databases, integrated simulated sensors, and created a web dashboard for real-time visualization for the Greenhouse Monitoring Platform, improving data accessibility and monitoring efficiency by 55%</li>
                                 <li>Formulated comprehensive Agile charters, including themes, epics, user stories, tasks, and personas for various software projects, leading to a 30% increase in project delivery speed and team alignment</li>
                                 <li>Evaluated existing GPS and Weight Tracking Dashboard architecture from vendors, compiled a list of feature inclusions, improvements, and bugs, and prioritized them by urgency and implementation phases to enhance system functionality</li>
                             </ul>
-                        </>
+                        </div>
                     )}
                     {activeExperience === 3 && (
-                        <>
+                        <div>
                             <div className="experience-heading">
-                                <h2>Experience 3 Title</h2>
-                                <p className="experience-timeline">Timeline for Experience 3</p>
+                                <h2>Data Analyst Co-op | UC Simulation Center - P&G Cincinnati, OH</h2>
+                                <p className="experience-timeline">January 2022 – April 2022</p>
                             </div>
-                            <p>Details about Experience 3</p>
-                        </>
+                            <ul className="experience-bullets">
+                                <li>Employed PowerBI for in-depth data analysis, implementing multi-time zone and daylight savings adjustments to ensure accurate insights across diverse datasets</li>
+                                <li>Developed a user-friendly Excel interface using VBA (Visual Basic for Applications), specifically tailored to optimize data entry processes and enhance efficiency within the warehouse operations, reducing data entry time by 40%</li>
+                            </ul>
+                        </div>
                     )}
                 </div>
             </section>

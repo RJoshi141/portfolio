@@ -228,18 +228,18 @@
     padding-left: 150px;
     padding-right: 90px;
     opacity: 0;
-    transform: translateY(400px);
+    transform: translateY(800px);
     transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.experience-section h1 {
-    text-align: left;
-    font-size: 40px;
 }
 
 .experience-section.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.experience-section h1 {
+    text-align: left;
+    font-size: 40px;
 }
 
 .experience-menu {
