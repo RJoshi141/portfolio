@@ -228,13 +228,13 @@
     padding-left: 150px;
     padding-right: 90px;
     opacity: 0;
-    transform: translateY(800px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateY(700px); /* Adjust initial translateY as needed */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Keep the transition */
 }
 
 .experience-section.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(300px); /* Keep the translateY at 0 when visible */
 }
 
 .experience-section h1 {
@@ -304,6 +304,13 @@
     border-radius: 5px;
 }
 
+.experience-details ul li {
+    font-family: 'SF Mono', monospace;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 10px;
+    position: relative;
+}
 
 html {
     scroll-behavior: smooth;
