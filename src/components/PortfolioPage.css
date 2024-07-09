@@ -191,7 +191,6 @@
     transform: scale(1.05); /* Adjust hover effect */
 }
 
-
 @keyframes fadeInLink {
     0% {
         opacity: 0;
@@ -246,7 +245,7 @@
 
 .experience-section.visible {
     opacity: 1;
-    transform: translateY(300px); /* Keep the translateY at 0 when visible */
+    transform: translateY(0); /* Keep the translateY at 0 when visible */
 }
 
 .experience-section h1 {
@@ -265,7 +264,6 @@
     margin-bottom: 10px;
     padding: 10px;
     transition: background-color 0.3s, color 0.3s;
-    
 }
 
 .experience-item.active {
@@ -326,4 +324,162 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .intro-container {
+        top: -60px;
+        left: 60px;
+    }
+
+    .navigation-links {
+        right: 40px;
+    }
+
+    .about-section,
+    .experience-section {
+        padding-left: 120px;
+        padding-right: 60px;
+    }
+
+    .experience-details {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 992px) {
+    .intro-container {
+        top: -50px;
+        left: 50px;
+    }
+
+    .navigation-links {
+        right: 30px;
+        gap: 15px;
+    }
+
+    .about-section,
+    .experience-section {
+        padding-left: 100px;
+        padding-right: 40px;
+    }
+
+    .experience-details {
+        margin-left: 180px;
+    }
+
+    .intro-name,
+    .intro-tagline {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-container {
+        top: -40px;
+        left: 40px;
+    }
+
+    .navigation-links {
+        right: 20px;
+        gap: 10px;
+    }
+
+    .about-section,
+    .experience-section {
+        padding-left: 80px;
+        padding-right: 30px;
+    }
+
+    .experience-details {
+        margin-left: 160px;
+    }
+
+    .intro-name,
+    .intro-tagline {
+        font-size: 40px;
+    }
+
+    .experience-menu {
+        width: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-left-logo {
+        width: 20px;
+    }
+
+    .intro-container {
+        top: -30px;
+        left: 30px;
+    }
+
+    .navigation-links {
+        top: 40px;
+        right: 15px;
+        gap: 8px;
+    }
+
+    .about-section,
+    .experience-section {
+        padding-left: 60px;
+        padding-right: 20px;
+    }
+
+    .experience-details {
+        margin-left: 140px;
+    }
+
+    .intro-name,
+    .intro-tagline {
+        font-size: 30px;
+    }
+
+    .intro-text,
+    .intro-tagline1 {
+        font-size: 13px;
+    }
+
+    .experience-menu {
+        width: 160px;
+    }
+}
+
+@media (max-width: 400px) {
+    .intro-container {
+        top: -20px;
+        left: 20px;
+    }
+
+    .navigation-links {
+        top: 30px;
+        right: 10px;
+        gap: 5px;
+    }
+
+    .about-section,
+    .experience-section {
+        padding-left: 40px;
+        padding-right: 10px;
+    }
+
+    .experience-details {
+        margin-left: 120px;
+    }
+
+    .intro-name,
+    .intro-tagline {
+        font-size: 25px;
+    }
+
+    .intro-text,
+    .intro-tagline1 {
+        font-size: 12px;
+    }
+
+    .experience-menu {
+        width: 140px;
+    }
 }
