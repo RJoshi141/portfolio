@@ -89,7 +89,6 @@ const PortfolioPage = () => {
                 <p className="intro-tagline1">
                     I can continue to grow and make impactful contributions.
                 </p>
-
                 <p className="intro-tagline1">
                     Beyond tech, I thrive in leadership roles. As a Senator-At-Large in the Undergraduate Student Government
                     at the University of Cincinnati, I passionately advocated for student interests and initiatives, contributing to a vibrant campus community.
