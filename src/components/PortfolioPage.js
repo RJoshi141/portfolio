@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './PortfolioPage.css';
-import resumePDF from '../assets/Ritika_Joshi_Resume.pdf'; // Import your resume PDF
+import resumePDF from '../assets/Ritika_Joshi_Resume.pdf';
 
 const PortfolioPage = () => {
     const reloadPage = () => {
@@ -9,7 +9,7 @@ const PortfolioPage = () => {
 
     const aboutRef = useRef(null);
     const experienceRef = useRef(null);
-    const [activeExperience, setActiveExperience] = useState(null);
+    const [activeExperience, setActiveExperience] = useState(1);
 
     const handleScroll = () => {
         const aboutSection = aboutRef.current;
