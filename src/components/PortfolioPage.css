@@ -350,6 +350,64 @@ html {
 
 
 
+/* Projects Section */
+.projects-section {
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.project-box {
+    background-color: rgba(255, 255, 255, 0.1); /* Dark grey background */
+    padding: 20px;
+    border-radius: 3px;
+    color: #fff;
+    text-align: left;
+    position: relative;
+}
+
+.project-box h1 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.project-box p {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.github-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5em;
+    color: #e1f3f2; /* Cyan color */
+    transition: transform 0.2s ease-in-out;
+}
+
+.github-icon:hover {
+    color: #1EFFF1; /* Cyan color */
+}
+
+.project-github-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+
+
+
+
+
 .social-icons {
     position: fixed;
     left: 60px; /* Align with your top-left logo */

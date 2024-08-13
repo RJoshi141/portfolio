@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './PortfolioPage.css';
 import resumePDF from '../assets/Ritika_Joshi_Resume.pdf';
+import { FaGithub } from 'react-icons/fa';
 
 const PortfolioPage = () => {
     const reloadPage = () => {
@@ -9,7 +10,7 @@ const PortfolioPage = () => {
 
     const aboutRef = useRef(null);
     const experienceRef = useRef(null);
-    const projectsRef = useRef(null); // Add reference for Projects section
+    const projectsRef = useRef(null);
     const [activeExperience, setActiveExperience] = useState(1);
 
     const handleScroll = () => {
@@ -28,74 +29,74 @@ const PortfolioPage = () => {
             experienceSection.classList.remove('visible');
         }
     };
+
     useEffect(() => {
         const handleScroll = () => {
-          const sections = document.querySelectorAll('.section');
-          const scrollPosition = window.scrollY + window.innerHeight * 1/9;
-    
-          sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-    
-            if (scrollPosition > sectionTop && scrollPosition < sectionTop + sectionHeight) {
-              const fadeAmount = 1 - (scrollPosition - sectionTop) / sectionHeight;
-              section.style.opacity = fadeAmount;
-            } else if (scrollPosition > sectionTop + sectionHeight) {
-              section.style.opacity = 0;
-            } else {
-              section.style.opacity = 1;
-            }
-          });
+            const sections = document.querySelectorAll('.section');
+            const scrollPosition = window.scrollY + window.innerHeight * 1/9;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+
+                if (scrollPosition > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    const fadeAmount = 1 - (scrollPosition - sectionTop) / sectionHeight;
+                    section.style.opacity = fadeAmount;
+                } else if (scrollPosition > sectionTop + sectionHeight) {
+                    section.style.opacity = 0;
+                } else {
+                    section.style.opacity = 1;
+                }
+            });
         };
-    
+
         window.addEventListener('scroll', handleScroll);
         handleScroll(); // Initial check to set opacity
-    
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []); // Empty dependency array ensures this runs once on mount
-    
-      const openResume = () => {
-        window.open(resumePDF, '_blank');
-      };
-    
 
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const openResume = () => {
+        window.open(resumePDF, '_blank');
+    };
 
     return (
         <div className="portfolio-container">
-        <div className="black-header">
-            <img 
-                src={`${process.env.PUBLIC_URL}/Logo.png`} 
-                className="top-left-logo" 
-                alt="Logo"
-                onClick={reloadPage}
-            />
-            <nav className="navigation-links">
-                <a href="#about" className="nav-link">About</a>
-                <a href="#experience" className="nav-link">Experience</a>
-                <a href="#projects" className="projects-button">Projects</a>
-                <a href="#" className="resume-button" onClick={openResume}>Resume</a>
-            </nav>
-        </div>
+            <div className="black-header">
+                <img 
+                    src={`${process.env.PUBLIC_URL}/Logo.png`} 
+                    className="top-left-logo" 
+                    alt="Logo"
+                    onClick={reloadPage}
+                />
+                <nav className="navigation-links">
+                    <a href="#about" className="nav-link">About</a>
+                    <a href="#experience" className="nav-link">Experience</a>
+                    <a href="#projects" className="projects-button">Projects</a>
+                    <a href="#" className="resume-button" onClick={openResume}>Resume</a>
+                </nav>
+            </div>
 
             <div className="black-screen-portfolio">
-            <div className="intro-container">
-            <p className="intro-text">Hi there! My name is</p>
-            <h1 className="intro-name">Ritika Joshi.</h1>
-            <h1 className="intro-tagline">I'm a Tech-Creative at heart!</h1>
-            <div className="intro-tagline-container">
-                <p className="intro-tagline1">
-                    I'm a recent graduate from the University of Cincinnati with a bachelor's degree in 
-                </p>
-                <p className="intro-tagline1">
-                Computer Science, actively seeking full-time opportunities in Front-End Development, 
-                </p>
-                <p className="intro-tagline1">
-                Web Development, and Data Analysis. </p>
+                <div className="intro-container">
+                    <p className="intro-text">Hi there! My name is</p>
+                    <h1 className="intro-name">Ritika Joshi.</h1>
+                    <h1 className="intro-tagline">I'm a Tech-Creative at heart!</h1>
+                    <div className="intro-tagline-container">
+                        <p className="intro-tagline1">
+                            I'm a recent graduate from the University of Cincinnati with a bachelor's degree in 
+                        </p>
+                        <p className="intro-tagline1">
+                            Computer Science, actively seeking full-time opportunities in Front-End Development, 
+                        </p>
+                        <p className="intro-tagline1">
+                            Web Development, and Data Analysis. </p>
+                    </div>
+                </div>
             </div>
-        </div>
-            </div>
+
             <section id="about" className="section about-section" ref={aboutRef}>
                 <h1>About Me</h1>
                 <p className="intro-tagline1">
@@ -178,23 +179,67 @@ const PortfolioPage = () => {
                     )}
                 </div>
             </section>
+
+            <section id="projects" className="section projects-section" ref={projectsRef}>
+                <h1>Projects</h1>
+                <div className="projects-grid">
+                    <div className="project-box">
+                        <a href="https://github.com/RJoshi141/pixie" target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FaGithub className="github-icon top-left" />
+                        </a>
+                        <a href="https://github.com/RJoshi141/pixie" target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FaGithub className="github-icon top-right" />
+                        </a>
+                        <div className="project-content">
+                            <h2>Pixie</h2>
+                            <p>A pixel art creation game where users can pick colors and paint in a grid.</p>
+                            <p>Tech Stack: React, CSS, JavaScript</p>
+                        </div>
+                    </div>
+                    <div className="project-box">
+                        <a href="https://github.com/RJoshi141/reddit-clone" target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FaGithub className="github-icon top-left" />
+                        </a>
+                        <a href="https://github.com/RJoshi141/reddit-clone" target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FaGithub className="github-icon top-right" />
+                        </a>
+                        <div className="project-content">
+                            <h2>Reddit Clone</h2>
+                            <p>A Reddit-like website with features including subreddits, upvotes, and user profiles.</p>
+                            <p>Tech Stack: React, Node.js, Express</p>
+                        </div>
+                    </div>
+                    <div className="project-box">
+                        <a href="https://github.com/RJoshi141/portfolio" target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FaGithub className="github-icon top-left" />
+                        </a>
+                        <a href="https://github.com/RJoshi141/portfolio" target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FaGithub className="github-icon top-right" />
+                        </a>
+                        <div className="project-content">
+                            <h2>Portfolio</h2>
+                            <p>This portfolio page showcasing my skills, experiences, and projects.</p>
+                            <p>Tech Stack: React, CSS</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div className="social-links">
+                <a href="https://www.linkedin.com/in/ritika-joshi-9395591a7/" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
+                    <i className="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/RJoshi141" target="_blank" rel="noopener noreferrer" className="social-icon github">
+                    <i className="fab fa-github"></i>
+                </a>
+                <a href="mailto:ritikajoshi141@gmail.com" className="social-icon gmail">
+                    <i className="fas fa-envelope"></i>
+                </a>
+                <div className="social-line"></div>
+                <div className="connect-text">Let’s Connect</div>
+            </div>
         </div>
     );
 };
-
-
-<div className="social-links">
-    <a href="https://www.linkedin.com/in/ritika-joshi-9395591a7/" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
-        <i className="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://github.com/RJoshi141" target="_blank" rel="noopener noreferrer" className="social-icon github">
-        <i className="fab fa-github"></i>
-    </a>
-    <a href="mailto:ritikajoshi141@gmail.com" className="social-icon gmail">
-        <i className="fas fa-envelope"></i>
-    </a>
-    <div className="social-line"></div> {/* Renamed to avoid conflict */}
-    <div className="connect-text">Let’s Connect</div>
-</div>
 
 export default PortfolioPage;
