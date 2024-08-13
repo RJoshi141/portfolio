@@ -31,7 +31,7 @@ const PortfolioPage = () => {
     useEffect(() => {
         const handleScroll = () => {
           const sections = document.querySelectorAll('.section');
-          const scrollPosition = window.scrollY + window.innerHeight * 1/5;
+          const scrollPosition = window.scrollY + window.innerHeight * 1/9;
     
           sections.forEach(section => {
             const sectionTop = section.offsetTop;
@@ -195,10 +195,6 @@ const PortfolioPage = () => {
     </a>
     <div className="social-line"></div> {/* Renamed to avoid conflict */}
     <div className="connect-text">Let’s Connect</div>
-
-
 </div>
-
-
 
 export default PortfolioPage;

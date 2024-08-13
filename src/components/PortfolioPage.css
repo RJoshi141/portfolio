@@ -369,7 +369,10 @@ html {
 
 .social-icons a:hover {
     color: #1EFFF1; /* Color on hover */
+    transform: scale(1.1) !important; /* Slightly increases the size */
+    transition: transform 0.1s ease; /* Smooth transition */
 }
+
 
 .social-icons svg {
     width: 25px;
@@ -383,6 +386,8 @@ html {
     width: 2px;
     height: 80px; /* Adjust height if needed */
     background-color: #1EFFF1;
+    opacity: 0;
+    animation: fadeInSocial 0.5s forwards 1.3s; /* Fades in after the icons */
 }
 
 .connect-text {
@@ -393,10 +398,39 @@ html {
     font-family: 'SF Mono', monospace;
     color: #1EFFF1;
     white-space: nowrap;
-    transform: rotate(-90deg); /* Rotate text 90 degrees counterclockwise */
+    transform: rotate(-90deg)!important; /* Rotate text 90 degrees counterclockwise */
     transform-origin: bottom left; /* Rotation point */ 
+    opacity: 0;
+    animation: fadeInSocial 0.5s forwards 1.4s; /* Fades in after the line */
 }
 
+/* Fade-in animation for social icons, line, and text */
+@keyframes fadeInSocial {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-in animation to social icons */
+.social-icons a:nth-child(1) {
+    opacity: 0;
+    animation: fadeInSocial 0.5s forwards 1s; /* 2s delay to match top-left logo */
+}
+
+.social-icons a:nth-child(2) {
+    opacity: 0;
+    animation: fadeInSocial 0.5s forwards 1.1s; /* Delay slightly longer for staggered effect */
+}
+
+.social-icons a:nth-child(3) {
+    opacity: 0;
+    animation: fadeInSocial 0.5s forwards 1.2s;
+}
 
 
 /* Responsive Styles */
