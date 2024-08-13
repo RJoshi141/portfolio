@@ -15,7 +15,10 @@
     color: #fff; /* Text color (white) */
     z-index: 1000; /* Ensures the header is above other content */
     padding: 10px 20px; /* Optional: adds padding around the header content */
-  }
+    transition: transform 0.45s ease-in-out; /* Smooth transition for the header movement */
+    transform: translateY(0); /* Default position */
+}
+
   
 .top-left-logo {
     position: absolute;

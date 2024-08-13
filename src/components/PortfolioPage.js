@@ -14,6 +14,40 @@ const PortfolioPage = () => {
     const [activeExperience, setActiveExperience] = useState(1);
 
 
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.querySelector('.black-header');
+        let lastScrollTop = 0;
+        let isHidden = false;
+        const scrollThreshold = 50; // Adjust this value to control the sensitivity
+    
+        if (header) {
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+                // Check if we've scrolled more than the threshold
+                if (Math.abs(scrollTop - lastScrollTop) > scrollThreshold) {
+                    // Scroll Down - hide header
+                    if (scrollTop > lastScrollTop && !isHidden) {
+                        header.style.transform = 'translateY(-100%)';
+                        isHidden = true;
+                    } 
+                    // Scroll Up - show header
+                    else if (scrollTop < lastScrollTop && isHidden) {
+                        header.style.transform = 'translateY(0)';
+                        isHidden = false;
+                    }
+    
+                    lastScrollTop = scrollTop;
+                }
+            });
+        } else {
+            console.error('Header element with class .black-header not found');
+        }
+    });
+    
+    
+
+
 
     useEffect(() => {
         const handleScroll = () => {
