@@ -58,22 +58,21 @@ const PortfolioPage = () => {
                 </nav>
             </div>
             <div className="black-screen-portfolio">
-                <div className="intro-container">
-                    <p className="intro-text">Hi there! My name is</p>
-                    <br />
-                    <h1 className="intro-name">Ritika Joshi.</h1>
-                    <h1 className="intro-tagline">I'm a Tech-Creative at heart!</h1>
-                    <br />
-                    <p className="intro-tagline1">
-                        I'm a recent graduate from the University of Cincinnati with a bachelor's degree in 
-                    </p>
-                    <p className="intro-tagline1">
-                        Computer Science, actively seeking full-time opportunities in Front-End Development,
-                    </p>
-                    <p className="intro-tagline1">
-                        Web Development, and Data Analysis.
-                    </p>
-                </div>
+            <div className="intro-container">
+            <p className="intro-text">Hi there! My name is</p>
+            <h1 className="intro-name">Ritika Joshi.</h1>
+            <h1 className="intro-tagline">I'm a Tech-Creative at heart!</h1>
+            <div className="intro-tagline-container">
+                <p className="intro-tagline1">
+                    I'm a recent graduate from the University of Cincinnati with a bachelor's degree in 
+                </p>
+                <p className="intro-tagline1">
+                Computer Science, actively seeking full-time opportunities in Front-End Development, 
+                </p>
+                <p className="intro-tagline1">
+                Web Development, and Data Analysis. </p>
+            </div>
+        </div>
             </div>
             <section id="about" className="section about-section" ref={aboutRef}>
                 <h1>About Me</h1>
