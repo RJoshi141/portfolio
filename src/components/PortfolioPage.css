@@ -5,7 +5,18 @@
     background-color: black;
     padding-bottom: 100vh;
 }
-
+.black-header {
+    position: fixed; /* Fixes the header in place */
+    top: 0; /* Aligns the header to the top of the page */
+    left: 0; /* Aligns the header to the left of the page */
+    width: 100%; /* Ensures the header spans the full width of the viewport */
+    height: 80px;
+    background-color: #000000; /* Background color (black) */
+    color: #fff; /* Text color (white) */
+    z-index: 1000; /* Ensures the header is above other content */
+    padding: 10px 20px; /* Optional: adds padding around the header content */
+  }
+  
 .top-left-logo {
     position: absolute;
     top: 50px;
@@ -76,7 +87,7 @@
 
 .intro-text {
     animation: fadeInText 0.5s forwards 0.6s;
-    color: #1EFFF1 !important;
+    color: #1EFFF1 ;
     font-family: 'SF Mono', monospace;
     font-size: 15px;
     margin: 0;
@@ -153,7 +164,7 @@
 .navigation-links {
     position: absolute;
     top: 50px;
-    right: 60px;
+    right: 80px;
     display: flex;
     gap: 20px;
     z-index: 30;
@@ -163,7 +174,7 @@
     color: white;
     text-decoration: none;
     font-family: 'SF Mono', monospace;
-    font-size: 16px;
+    font-size: 14px;
     transition: color 0.2s ease;
     opacity: 0;
 }
@@ -173,22 +184,28 @@
 }
 
 .navigation-links a:nth-child(2) {
-    animation: fadeInLink 0.19s forwards 0.3s;
+    animation: fadeInLink 0.19s forwards 0.25s;
 }
 
 .navigation-links a:nth-child(3) {
-    animation: fadeInLink 0.29s forwards 0.4s;
+    animation: fadeInLink 0.29s forwards 0.3s;
 }
 
-/* Styles for Resume button */
+.navigation-links a:nth-child(4) {
+    animation: fadeInLink 0.39s forwards 0.35s;
+}
+
+/* Resume button */
 .navigation-links .resume-button {
     border-radius: 4px;
     cursor: pointer;
+    color: white;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .navigation-links .resume-button:hover {
-    transform: scale(1.05); /* Adjust hover effect */
+    color: #1EFFF1;
+    transform: scale(1.05);
 }
 
 @keyframes fadeInLink {
@@ -203,8 +220,10 @@
 }
 
 .navigation-links a:hover {
-    color: #1EFFF1;
+    color: #1EFFF1!important;
 }
+
+
 
 .section {
     padding: 100px 60px;
@@ -212,7 +231,9 @@
     position: relative;
     z-index: 10;
     scroll-padding-top: 100px;
+    transition: opacity 0.5s ease-out; /* Smooth transition for fading */
 }
+
 
 .about-section {
     padding-left: 150px;
@@ -326,6 +347,57 @@
 html {
     scroll-behavior: smooth;
 }
+
+
+
+.social-icons {
+    position: fixed;
+    left: 60px; /* Align with your top-left logo */
+    bottom: 240px; /* Adjust this value to move the icons down */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+}
+
+.social-icons a {
+    color: #ffffff; /* Color for icons */
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #1EFFF1; /* Color on hover */
+}
+
+.social-icons svg {
+    width: 25px;
+    height: 25px;
+}
+
+.social-line {
+    position: fixed;
+    left: 70px; /* Align with the icons */
+    bottom: 160px; /* Adjust this value if needed */
+    width: 2px;
+    height: 80px; /* Adjust height if needed */
+    background-color: #1EFFF1;
+}
+
+.connect-text {
+    position: fixed;
+    left: 78px; /* Align with the icons and line */
+    bottom: 55px; /* Adjust this value to position the text */
+    font-size: 12px; 
+    font-family: 'SF Mono', monospace;
+    color: #1EFFF1;
+    white-space: nowrap;
+    transform: rotate(-90deg); /* Rotate text 90 degrees counterclockwise */
+    transform-origin: bottom left; /* Rotation point */ 
+}
+
+
 
 /* Responsive Styles */
 @media (max-width: 1200px) {

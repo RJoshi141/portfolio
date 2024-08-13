@@ -9,6 +9,7 @@ const PortfolioPage = () => {
 
     const aboutRef = useRef(null);
     const experienceRef = useRef(null);
+    const projectsRef = useRef(null); // Add reference for Projects section
     const [activeExperience, setActiveExperience] = useState(1);
 
     const handleScroll = () => {
@@ -27,36 +28,57 @@ const PortfolioPage = () => {
             experienceSection.classList.remove('visible');
         }
     };
-
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
+        const handleScroll = () => {
+          const sections = document.querySelectorAll('.section');
+          const scrollPosition = window.scrollY + window.innerHeight * 1/5;
+    
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+    
+            if (scrollPosition > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+              const fadeAmount = 1 - (scrollPosition - sectionTop) / sectionHeight;
+              section.style.opacity = fadeAmount;
+            } else if (scrollPosition > sectionTop + sectionHeight) {
+              section.style.opacity = 0;
+            } else {
+              section.style.opacity = 1;
+            }
+          });
         };
-    }, []);
-
-    const openResume = () => {
+    
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial check to set opacity
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []); // Empty dependency array ensures this runs once on mount
+    
+      const openResume = () => {
         window.open(resumePDF, '_blank');
-    };
+      };
+    
+
 
     return (
         <div className="portfolio-container">
+        <div className="black-header">
             <img 
                 src={`${process.env.PUBLIC_URL}/Logo.png`} 
                 className="top-left-logo" 
                 alt="Logo"
                 onClick={reloadPage}
             />
-            <div className="black-header">
-                <nav className="navigation-links">
-                    <a href="#about" className="nav-link">About</a>
-                    <a href="#experience" className="nav-link">Experience</a>
-                    <a href="#" className="resume-button" onClick={openResume}>
-                        Resume
-                    </a>
+            <nav className="navigation-links">
+                <a href="#about" className="nav-link">About</a>
+                <a href="#experience" className="nav-link">Experience</a>
+                <a href="#projects" className="projects-button">Projects</a>
+                <a href="#" className="resume-button" onClick={openResume}>Resume</a>
+            </nav>
+        </div>
 
-                </nav>
-            </div>
             <div className="black-screen-portfolio">
             <div className="intro-container">
             <p className="intro-text">Hi there! My name is</p>
@@ -96,6 +118,7 @@ const PortfolioPage = () => {
                     Fun fact: I had the honor of being the Student Commencement Speaker at my graduation, representing the Spring 2024 undergraduate class with an impactful address at all three graduation ceremonies.
                 </p>
             </section>
+
             <section id="experience" className="section experience-section" ref={experienceRef}>
                 <h1>Experience</h1>
                 <div className="experience-menu">
@@ -158,5 +181,24 @@ const PortfolioPage = () => {
         </div>
     );
 };
+
+
+<div className="social-links">
+    <a href="https://www.linkedin.com/in/ritika-joshi-9395591a7/" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
+        <i className="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://github.com/RJoshi141" target="_blank" rel="noopener noreferrer" className="social-icon github">
+        <i className="fab fa-github"></i>
+    </a>
+    <a href="mailto:ritikajoshi141@gmail.com" className="social-icon gmail">
+        <i className="fas fa-envelope"></i>
+    </a>
+    <div className="social-line"></div> {/* Renamed to avoid conflict */}
+    <div className="connect-text">Let’s Connect</div>
+
+
+</div>
+
+
 
 export default PortfolioPage;
