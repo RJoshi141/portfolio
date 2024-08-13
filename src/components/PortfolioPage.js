@@ -13,50 +13,36 @@ const PortfolioPage = () => {
     const projectsRef = useRef(null);
     const [activeExperience, setActiveExperience] = useState(1);
 
-    const handleScroll = () => {
-        const aboutSection = aboutRef.current;
-        const experienceSection = experienceRef.current;
 
-        if (aboutSection.getBoundingClientRect().top < window.innerHeight * 0.75) {
-            aboutSection.classList.add('visible');
-        } else {
-            aboutSection.classList.remove('visible');
-        }
-
-        if (experienceSection.getBoundingClientRect().top < window.innerHeight * 0.75) {
-            experienceSection.classList.add('visible');
-        } else {
-            experienceSection.classList.remove('visible');
-        }
-    };
 
     useEffect(() => {
         const handleScroll = () => {
             const sections = document.querySelectorAll('.section');
-            const scrollPosition = window.scrollY + window.innerHeight * 1/9;
-
+            const scrollPosition = window.scrollY + window.innerHeight * 2 / 3;
+    
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.offsetHeight;
-
+    
                 if (scrollPosition > sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    const fadeAmount = 1 - (scrollPosition - sectionTop) / sectionHeight;
+                    // Calculate the fade amount based on scroll position
+                    const fadeAmount = Math.min(1, (scrollPosition - sectionTop) / (sectionHeight * 0.5));
                     section.style.opacity = fadeAmount;
-                } else if (scrollPosition > sectionTop + sectionHeight) {
+                } else if (scrollPosition <= sectionTop) {
+                    // If above the section, make sure opacity is 0
                     section.style.opacity = 0;
-                } else {
-                    section.style.opacity = 1;
                 }
             });
         };
-
+    
         window.addEventListener('scroll', handleScroll);
         handleScroll(); // Initial check to set opacity
-
+    
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    
 
     const openResume = () => {
         window.open(resumePDF, '_blank');
@@ -180,50 +166,112 @@ const PortfolioPage = () => {
                 </div>
             </section>
 
+
             <section id="projects" className="section projects-section" ref={projectsRef}>
-                <h1>Projects</h1>
-                <div className="projects-grid">
-                    <div className="project-box">
-                        <a href="https://github.com/RJoshi141/pixie" target="_blank" rel="noopener noreferrer" className="project-link">
-                            <FaGithub className="github-icon top-left" />
-                        </a>
-                        <a href="https://github.com/RJoshi141/pixie" target="_blank" rel="noopener noreferrer" className="project-link">
-                            <FaGithub className="github-icon top-right" />
-                        </a>
-                        <div className="project-content">
-                            <h2>Pixie</h2>
-                            <p>A pixel art creation game where users can pick colors and paint in a grid.</p>
-                            <p>Tech Stack: React, CSS, JavaScript</p>
-                        </div>
-                    </div>
-                    <div className="project-box">
-                        <a href="https://github.com/RJoshi141/reddit-clone" target="_blank" rel="noopener noreferrer" className="project-link">
-                            <FaGithub className="github-icon top-left" />
-                        </a>
-                        <a href="https://github.com/RJoshi141/reddit-clone" target="_blank" rel="noopener noreferrer" className="project-link">
-                            <FaGithub className="github-icon top-right" />
-                        </a>
-                        <div className="project-content">
-                            <h2>Reddit Clone</h2>
-                            <p>A Reddit-like website with features including subreddits, upvotes, and user profiles.</p>
-                            <p>Tech Stack: React, Node.js, Express</p>
-                        </div>
-                    </div>
-                    <div className="project-box">
-                        <a href="https://github.com/RJoshi141/portfolio" target="_blank" rel="noopener noreferrer" className="project-link">
-                            <FaGithub className="github-icon top-left" />
-                        </a>
-                        <a href="https://github.com/RJoshi141/portfolio" target="_blank" rel="noopener noreferrer" className="project-link">
-                            <FaGithub className="github-icon top-right" />
-                        </a>
-                        <div className="project-content">
-                            <h2>Portfolio</h2>
-                            <p>This portfolio page showcasing my skills, experiences, and projects.</p>
-                            <p>Tech Stack: React, CSS</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <h1>Projects</h1>
+    <div className="projects-grid">
+       
+        <div className="project-box">
+            <a href="https://github.com/RJoshi141/pixie" target="_blank" rel="noopener noreferrer" className="project-link">
+                <FaGithub className="github-icon top-right" />
+            </a>
+            <div className="project-content">
+                <h2>Pixie</h2>
+                <p>An online pixel art game where you can create art by picking colors from a palette and painting on a grid.</p>
+                <p>Features include grid resizing, undo/redo functionality, and a save option for your creations.</p>
+                <p className="tech-stack">
+                    <span>React</span>
+                    <span>JavaScript</span>
+                    <span>TypeScript</span>
+                    <span>CSS</span>
+                    <span>SASS</span>
+                    <span>Node.js</span>
+                    <span>Express</span>
+                </p>
+            </div>
+        </div>
+        <div className="project-box">
+            <a href="https://github.com/RJoshi141/reddit-clone" target="_blank" rel="noopener noreferrer" className="project-link">
+                <FaGithub className="github-icon top-right" />
+            </a>
+            <div className="project-content">
+                <h2>Reddit Clone</h2>
+                <p>A Reddit-like website with functionalities including subreddit creation, post upvoting, and user profiles.</p>
+                <p>Users can interact by subscribing to subreddits, submitting posts, and engaging with comments</p>                
+                <p className="tech-stack">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Express</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </p>
+            </div>
+        </div>
+        <div className="project-box">
+            <a href="https://github.com/RJoshi141/portfolio" target="_blank" rel="noopener noreferrer" className="project-link">
+                <FaGithub className="github-icon top-right" />
+            </a>
+            <div className="project-content">
+                <h2>Portfolio</h2>
+                <p>This portfolio page showcases my skills, experiences, and projects.</p>
+                <p>Features include dynamic content sections, responsive design, and smooth scrolling effects. The site is built with modern web technologies to provide an engaging and interactive user experience.</p>                
+                <p className="tech-stack">
+                    <span>React</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </p>
+            </div>
+        </div>
+
+        
+        <div className="project-box">
+            <a href="https://github.com/RJoshi141/retro-snake-game" target="_blank" rel="noopener noreferrer" className="project-link">
+                <FaGithub className="github-icon top-right" />
+            </a>
+            <div className="project-content">
+                <h2>Retro Snake Game</h2>
+                <p>This repository features a classic Snake game implemented in Python using the Turtle graphics library and the freegames module. Dive into this timeless arcade adventure, complete with colorful visuals and a dash of nostalgia.</p>
+                <p className="tech-stack">
+                    <span>Python</span>
+                    <span>Turtle Graphics</span>
+                    <span>Freegames Module</span>
+                </p>
+            </div>
+        </div>
+        <div className="project-box">
+            <a href="https://github.com/RJoshi141/meteor-shooter-game" target="_blank" rel="noopener noreferrer" className="project-link">
+                <FaGithub className="github-icon top-right" />
+            </a>
+            <div className="project-content">
+                <h2>Meteor Shooter Game</h2>
+                <p>This is a classic arcade-style game where you control a neon blue gun and shoot at falling meteors. The bigger the meteor, the more points you score! Watch out, though—miss too many meteors, and the game will end!</p>
+                <p className="tech-stack">
+                    <span>Python</span>
+                    <span>Pygame</span>
+                </p>
+            </div>
+        </div>
+        <div className="project-box">
+            <a href="https://github.com/RJoshi141/rock-paper-scissors-lizard-spock" target="_blank" rel="noopener noreferrer" className="project-link">
+                <FaGithub className="github-icon top-right" />
+            </a>
+            <div className="project-content">
+                <h2>Rock Paper Scissors Lizard Spock</h2>
+                <p>This is an implementation of the classic game Rock Paper Scissors Lizard Spock in Python. The game adds a twist to the traditional Rock Paper Scissors with two additional choices and unique interactions.</p>
+                <p className="tech-stack">
+                    <span>Python</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+            
+
+
+
 
             <div className="social-links">
                 <a href="https://www.linkedin.com/in/ritika-joshi-9395591a7/" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">

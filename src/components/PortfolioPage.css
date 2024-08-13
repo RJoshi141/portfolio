@@ -235,6 +235,8 @@
 }
 
 
+
+
 .about-section {
     padding-left: 150px;
     padding-right: 90px;
@@ -352,41 +354,64 @@ html {
 
 /* Projects Section */
 .projects-section {
-    padding: 60px 20px;
+    padding-left: 150px;
+    padding-right: 90px;
     text-align: left;
+    margin-top: 100px;
+    padding-top: 140px;
 }
 
+/* Projects Heading */
+.projects-section h1 {
+    font-size: 35px; /* Set font size for the Projects heading */
+    margin: 0; /* Remove any default margin */
+}
+
+/* Projects Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+    grid-template-columns: repeat(3, 1fr); /* Three boxes per row by default */
+    gap: 40px !important; /* Ensures the gap between boxes */
     margin-top: 40px;
 }
 
+/* Project Box */
 .project-box {
     background-color: rgba(255, 255, 255, 0.1); /* Dark grey background */
     padding: 20px;
-    border-radius: 3px;
+    border-radius: 4px;
     color: #fff;
     text-align: left;
-    position: relative;
+    position: relative; /* Allow for absolute positioning of children */
+    aspect-ratio: 1; /* Ensures the box is square */
+    max-width: 300px; /* Set maximum width */
+    max-height: 300px; /* Set maximum height */
+    box-sizing: border-box;
+    margin: 0;
+    transition: transform 0.1s ease; /* Smooth transition for the hover effect */
+}
+.project-box:hover {
+    transform: translateY(-4px); /* Move the box up by 2px on hover */
 }
 
-.project-box h1 {
+/* Project Box Title */
+.project-box h2 {
     margin-top: 0;
-    font-size: 1.5em;
+    font-size: 22px; /* font size for project titles */
 }
 
+/* Project Box Paragraphs */
 .project-box p {
     margin-bottom: 10px;
-    font-size: 1em;
+    font-size: 14px;
 }
 
+/* GitHub Icon */
 .github-icon {
     position: absolute;
     top: 15px;
     right: 15px;
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: #e1f3f2; /* Cyan color */
     transition: transform 0.2s ease-in-out;
 }
@@ -395,12 +420,34 @@ html {
     color: #1EFFF1; /* Cyan color */
 }
 
-.project-github-link {
-    text-decoration: none;
-    color: inherit;
+/* Tech Stack Styling */
+.tech-stack {
+    font-family: 'SF Mono', monospace;
+    color: #1EFFF1;
+    font-size: 12px !important;
+    position: absolute;
+    bottom: 25px; /* Position tech stack at the bottom of the box */
+    left: 20px; /* Adjust positioning as needed */
+    text-align: left; /* Align text to the left */
 }
 
+.tech-stack span {
+    display: inline-block;
+    margin-right: 15px; /* Adds space between each tech stack term */
+    margin-top: 8px; /* Space above each term */
+}
 
+/* Ensure responsive design */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two boxes per row on smaller screens */
+    }
+}
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* One box per row on very small screens */
+    }
+}
 
 
 
