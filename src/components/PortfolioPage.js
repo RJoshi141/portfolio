@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './PortfolioPage.css';
-import resumePDF from '../assets/Ritika_Joshi_Resume.pdf';
+import resumePDF from '../assets/Resume.pdf';
 import { FaGithub } from 'react-icons/fa';
 
 const PortfolioPage = () => {
