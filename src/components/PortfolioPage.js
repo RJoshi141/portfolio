@@ -101,18 +101,18 @@ const PortfolioPage = () => {
 
             <div className="black-screen-portfolio">
                 <div className="intro-container">
+                <p className="intro-text"></p>
                     <p className="intro-text">Hi there! My name is</p>
                     <h1 className="intro-name">Ritika Joshi.</h1>
                     <h1 className="intro-tagline">I'm a Tech-Creative at heart!</h1>
                     <div className="intro-tagline-container">
                         <p className="intro-tagline1">
-                            I'm a recent graduate from the University of Cincinnati with a bachelor's degree in 
-                        </p>
+                        Welcome to my portfolio! I'm a recent graduate from the University of Cincinnati with a bachelor's</p>
                         <p className="intro-tagline1">
-                            Computer Science, actively seeking full-time opportunities in Front-End Development, 
-                        </p>
+                        degree in Computer Science. I'm on the lookout for exciting opportunities in Front-End Development,</p>
                         <p className="intro-tagline1">
-                            Web Development, and Data Analysis. </p>
+                        Web Development, and Data Analysis. </p>
+                        <p className="intro-tagline1">Feel free to explore my work, and don't hesitate to reach out if you'd like to connect.</p>
                     </div>
                 </div>
             </div>
@@ -123,21 +123,21 @@ const PortfolioPage = () => {
                     I'm a passionate developer with a love for creating beautiful, functional web applications.
                 </p>
                 <p className="intro-tagline1">
-                    My journey in tech started at a young age and has taken me through various exciting projects
+                    My journey in tech started at a young age and has taken me through various exciting projects and learning experiences. I'm eager to bring my skills and enthusiasm to a dynamic team where I can continue to grow and make impactful contributions.
                 </p>
-                <p className="intro-tagline1">
-                    and learning experiences. I'm eager to bring my skills and enthusiasm to a dynamic team where
-                </p>
-                <p className="intro-tagline1">
-                    I can continue to grow and make impactful contributions.
-                </p>
+
                 <p className="intro-tagline1">
                     Beyond tech, I thrive in leadership roles. As a Senator-At-Large in the Undergraduate Student Government
                     at the University of Cincinnati, I passionately advocated for student interests and initiatives, contributing to a vibrant campus community.
                 </p>
+                
                 <p className="intro-tagline1">
-                    Fun fact: I had the honor of being the Student Commencement Speaker at my graduation, representing the Spring 2024 undergraduate class with an impactful address at all three graduation ceremonies.
-                </p>
+                    <span style={{ color: '#1EFFF1' }}>Fun fact:</span> I had the honor of being the Student Commencement Speaker at my graduation, representing the Spring 2024 undergraduate class with an impactful address at all three graduation ceremonies.
+                     <a href="https://www.uc.edu/news/articles/2024/04/uc-recognizes-its-largest-graduating-class-in-history-in-three-days-of-commencement.html#:~:text=Undergraduate%20student%20speaker%20Ritika%20Joshi" target="_blank" rel="noopener noreferrer" className="speech-button">Check out the highlights</a></p>
+                
+
+
+
             </section>
 
             <section id="experience" className="section experience-section" ref={experienceRef}>
@@ -161,7 +161,7 @@ const PortfolioPage = () => {
                     {activeExperience === 1 && (
                         <div>
                             <div className="experience-heading">
-                                <h2>CS Production Control Co-op | TMMK Georgetown, KY</h2>
+                                <h2>STEM Co-op [Production Control] | TMMK Georgetown, KY</h2>
                                 <p className="experience-timeline">May 2023 – August 2023</p>
                             </div>
                             <ul className="experience-bullets">
@@ -175,7 +175,7 @@ const PortfolioPage = () => {
                     {activeExperience === 2 && (
                         <div>
                             <div className="experience-heading">
-                                <h2>UI Process Engineer Intern | BECO VENTURES, Singapore</h2>
+                                <h2>CS Intern [UI Process Engineer] | BECO VENTURES, Singapore</h2>
                                 <p className="experience-timeline">September 2022 – December 2022</p>
                             </div>
                             <ul className="experience-bullets">
@@ -188,7 +188,7 @@ const PortfolioPage = () => {
                     {activeExperience === 3 && (
                         <div>
                             <div className="experience-heading">
-                                <h2>Data Analyst Co-op | UC Simulation Center - P&G Cincinnati, OH</h2>
+                                <h2>CS Co-op [Data Analyst] | UC Simulation Center - P&G Cincinnati, OH</h2>
                                 <p className="experience-timeline">January 2022 – April 2022</p>
                             </div>
                             <ul className="experience-bullets">
@@ -242,29 +242,29 @@ const PortfolioPage = () => {
             </div>
         </div>
         <div className="project-box">
-            <a href="https://github.com/RJoshi141/portfolio" target="_blank" rel="noopener noreferrer" className="project-link">
+            <a href="https://github.com/RJoshi141/KroDash" target="_blank" rel="noopener noreferrer" className="project-link">
                 <FaGithub className="github-icon top-right" />
             </a>
             <div className="project-content">
-                <h2>Portfolio</h2>
-                <p>This portfolio page showcases my skills, experiences, and projects.</p>
-                <p>Features include dynamic content sections, responsive design, and smooth scrolling effects. The site is built with modern web technologies to provide an engaging and interactive user experience.</p>                
+                <h2>KroDash</h2>
+                <p>Built a Flask-based retail data dashboard on Heroku for efficient data processing.</p>
+                <p>Improved Kroger’s data analysis with visualizations, boosting decision-making and inventory management.</p>
                 <p className="tech-stack">
-                    <span>React</span>
-                    <span>CSS</span>
+                    <span>SQLAlchemy</span>
+                    <span>Azure PostgreSQL</span>
+                    <span>HTML</span>
+                    <span>Heroku</span>
                     <span>JavaScript</span>
                 </p>
             </div>
         </div>
-
-        
         <div className="project-box">
             <a href="https://github.com/RJoshi141/retro-snake-game" target="_blank" rel="noopener noreferrer" className="project-link">
                 <FaGithub className="github-icon top-right" />
             </a>
             <div className="project-content">
                 <h2>Retro Snake Game</h2>
-                <p>This repository features a classic Snake game implemented in Python using the Turtle graphics library and the freegames module. Dive into this timeless arcade adventure, complete with colorful visuals and a dash of nostalgia.</p>
+                <p>This repository features a classic Snake game implemented in Python using the Turtle graphics library and the freegames module.</p>
                 <p className="tech-stack">
                     <span>Python</span>
                     <span>Turtle Graphics</span>
@@ -278,20 +278,38 @@ const PortfolioPage = () => {
             </a>
             <div className="project-content">
                 <h2>Meteor Shooter Game</h2>
-                <p>This is a classic arcade-style game where you control a neon blue gun and shoot at falling meteors. The bigger the meteor, the more points you score! Watch out, though—miss too many meteors, and the game will end!</p>
+                <p>In this classic arcade-style game, control a neon blue gun to shoot falling meteors. Larger meteors score more points, but missing too many ends the game.</p>
                 <p className="tech-stack">
                     <span>Python</span>
                     <span>Pygame</span>
                 </p>
             </div>
         </div>
+
+        
         <div className="project-box">
-            <a href="https://github.com/RJoshi141/rock-paper-scissors-lizard-spock" target="_blank" rel="noopener noreferrer" className="project-link">
+            <a href="https://github.com/RJoshi141/portfolio" target="_blank" rel="noopener noreferrer" className="project-link">
                 <FaGithub className="github-icon top-right" />
             </a>
             <div className="project-content">
-                <h2>Rock Paper Scissors Lizard Spock</h2>
-                <p>This is an implementation of the classic game Rock Paper Scissors Lizard Spock in Python. The game adds a twist to the traditional Rock Paper Scissors with two additional choices and unique interactions.</p>
+                <h2>Portfolio</h2>
+                <p>This portfolio page showcases my skills, experiences, and projects.</p>
+                <p>Features include dynamic content sections, responsive design, and smooth scrolling effects.</p>                
+                <p className="tech-stack">
+                    <span>React</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </p>
+            </div>
+        </div>
+        <div className="project-box">
+            <a href="https://github.com/RJoshi141/TextbasedGame" target="_blank" rel="noopener noreferrer" className="project-link">
+                <FaGithub className="github-icon top-right" />
+            </a>
+            <div className="project-content">
+                <h2>Office Adventure Game</h2>
+                <p>A text-based adventure set in the quirky world of The Office.</p>
+                <p>Play as a secret agent on a mission to defeat the Beast of Scranton, navigating through suspenseful challenges and critical decisions within the chaos of Dunder Mifflin.</p>                
                 <p className="tech-stack">
                     <span>Python</span>
                 </p>
@@ -302,7 +320,8 @@ const PortfolioPage = () => {
 
 
 
-            
+
+
 
 
 
@@ -321,7 +340,7 @@ const PortfolioPage = () => {
                 <div className="connect-text">Let’s Connect</div>
             </div>
         </div>
-    );
-};
+        );
+    };
 
 export default PortfolioPage;

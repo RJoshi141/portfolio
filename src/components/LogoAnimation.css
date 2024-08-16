@@ -16,7 +16,7 @@
 }
 
 .logo {
-    width: 25px; /* Adjust the size as needed */
+    width: 20px; /* Adjust the size as needed */
     position: absolute;
     animation: appear 1s forwards;
 }
@@ -24,14 +24,14 @@
 .R-logo {
     animation-delay: 0s;
     z-index: 1; /* Ensure R is below J */
-    right: -20px;
+    right: -15px;
     bottom: -10px;
 }
 
 .J-logo {
     animation-delay: 1; /* Delay the J */
-    right: -25px;
-    bottom: -10px;
+    right: -20px;
+    bottom: -11px;
 }
 
 @keyframes appear {
