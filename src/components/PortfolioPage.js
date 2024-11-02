@@ -134,31 +134,44 @@ const PortfolioPage = () => {
                 <p className="intro-tagline1">
                     <span style={{ color: '#1EFFF1' }}>Fun fact:</span> I had the honor of being the Student Commencement Speaker at my graduation, representing the Spring 2024 undergraduate class with an impactful address at all three graduation ceremonies.
                      <a href="https://www.uc.edu/news/articles/2024/04/uc-recognizes-its-largest-graduating-class-in-history-in-three-days-of-commencement.html#:~:text=Undergraduate%20student%20speaker%20Ritika%20Joshi" target="_blank" rel="noopener noreferrer" className="speech-button">Check out the highlights</a></p>
-                
-
-
-
             </section>
 
             <section id="experience" className="section experience-section" ref={experienceRef}>
                 <h1>Experience</h1>
                 <div className="experience-menu">
                     <div className={`experience-item ${activeExperience === 1 ? 'active' : ''}`} onClick={() => setActiveExperience(1)}>
-                        Toyota Motors Manufacturing Kentucky
+                        Bright Mind Enrichment San Francicso
                         {activeExperience === 1 && <div className="line"></div>}
                     </div>
                     <div className={`experience-item ${activeExperience === 2 ? 'active' : ''}`} onClick={() => setActiveExperience(2)}>
-                        BECO VENTURES Singapore
+                        Toyota Motors Manufacturing Kentucky
                         {activeExperience === 2 && <div className="line"></div>}
                     </div>
                     <div className={`experience-item ${activeExperience === 3 ? 'active' : ''}`} onClick={() => setActiveExperience(3)}>
-                        P&G Cincinnati
+                        BECO VENTURES Singapore
                         {activeExperience === 3 && <div className="line"></div>}
+                    </div>
+                    <div className={`experience-item ${activeExperience === 4 ? 'active' : ''}`} onClick={() => setActiveExperience(4)}>
+                        P&G Cincinnati
+                        {activeExperience === 4 && <div className="line"></div>}
                     </div>
                 </div>
 
                 <div className="experience-details">
                     {activeExperience === 1 && (
+                        <div>
+                            <div className="experience-heading">
+                                <h2>UI/UX Web Developer | BMEAS San Francicso, CA</h2>
+                                <p className="experience-timeline">September 2024 – Present</p>
+                            </div>
+                            <ul className="experience-bullets">
+                                <li>Led the integration of front-end features with back-end services, ensuring functionality aligned with user and stakeholder requirements</li>
+                                <li>Enhanced the user experience by creating a seamless data flow across critical web pages, aligning website performance with brand objectives and ensuring consistent cross-device accessibility</li>
+                                <li>Leveraged RESTful APIs, Figma for design, and WordPress, HTML, and CSS to build user-friendly and visually cohesive web pages that effectively communicate the brand’s mission and improve engagement</li>
+                            </ul>
+                        </div>
+                    )}
+                    {activeExperience === 2 && (
                         <div>
                             <div className="experience-heading">
                                 <h2>STEM Co-op [Production Control] | TMMK Georgetown, KY</h2>
@@ -172,7 +185,7 @@ const PortfolioPage = () => {
                             </ul>
                         </div>
                     )}
-                    {activeExperience === 2 && (
+                    {activeExperience === 3 && (
                         <div>
                             <div className="experience-heading">
                                 <h2>CS Intern [UI Process Engineer] | BECO VENTURES, Singapore</h2>
@@ -185,7 +198,7 @@ const PortfolioPage = () => {
                             </ul>
                         </div>
                     )}
-                    {activeExperience === 3 && (
+                    {activeExperience === 4 && (
                         <div>
                             <div className="experience-heading">
                                 <h2>CS Co-op [Data Analyst] | UC Simulation Center - P&G Cincinnati, OH</h2>
@@ -204,7 +217,20 @@ const PortfolioPage = () => {
             <section id="projects" className="section projects-section" ref={projectsRef}>
     <h1>Projects</h1>
     <div className="projects-grid">
-       
+
+        <div className="project-box">
+                <a href="https://github.com/RJoshi141/matrix" target="_blank" rel="noopener noreferrer" className="project-link">
+                    <FaGithub className="github-icon top-right" />
+                </a>
+                <div className="project-content">
+                    <h2>Matrix</h2>
+                    <p>The iconic green text from The Matrix is now live in your browser, letting you experience the falling code effect as if you're in the movie itself!</p>
+                    <p className="tech-stack">
+                        <span>HTML</span>
+                        <span>JavaScript</span>
+                    </p>
+                </div>
+        </div>
         <div className="project-box">
             <a href="https://github.com/RJoshi141/pixie" target="_blank" rel="noopener noreferrer" className="project-link">
                 <FaGithub className="github-icon top-right" />
