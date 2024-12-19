@@ -67,6 +67,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    text-align: center; 
     padding-left: 60px;
     position: relative;
     top: 0;
@@ -139,7 +140,7 @@
 @keyframes fadeInFromTop {
     0% {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-5px);
     }
     100% {
         opacity: 1;
@@ -399,7 +400,7 @@ html {
 
 /* Project Box */
 .project-box {
-    background-color: rgba(255, 255, 255, 0.1); /* Dark grey background */
+    background-color: rgb(28, 28, 28); /* Dark grey background */
     padding: 20px;
     border-radius: 4px;
     color: #fff;

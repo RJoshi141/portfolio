@@ -111,7 +111,7 @@ const PortfolioPage = () => {
                         <p className="intro-tagline1">
                         degree in Computer Science. I'm on the lookout for exciting opportunities in Front-End Development,</p>
                         <p className="intro-tagline1">
-                        Web Development, and Data Analysis. </p>
+                         Full Stack, Web Development, and Software Developement. </p>
                         <p className="intro-tagline1">Feel free to explore my work, and don't hesitate to reach out if you'd like to connect.</p>
                     </div>
                 </div>
@@ -123,14 +123,12 @@ const PortfolioPage = () => {
                     I'm a passionate developer with a love for creating beautiful, functional web applications.
                 </p>
                 <p className="intro-tagline1">
-                    My journey in tech started at a young age and has taken me through various exciting projects and learning experiences. I'm eager to bring my skills and enthusiasm to a dynamic team where I can continue to grow and make impactful contributions.
+                     My passion for tech began early, driving me to work on exciting projects and constantly learn. I'm excited to contribute my skills and grow with a dynamic team.
                 </p>
-
                 <p className="intro-tagline1">
                     Beyond tech, I thrive in leadership roles. As a Senator-At-Large in the Undergraduate Student Government
                     at the University of Cincinnati, I passionately advocated for student interests and initiatives, contributing to a vibrant campus community.
                 </p>
-                
                 <p className="intro-tagline1">
                     <span style={{ color: '#1EFFF1' }}>Fun fact:</span> I had the honor of being the Student Commencement Speaker at my graduation, representing the Spring 2024 undergraduate class with an impactful address at all three graduation ceremonies.
                      <a href="https://www.uc.edu/news/articles/2024/04/uc-recognizes-its-largest-graduating-class-in-history-in-three-days-of-commencement.html#:~:text=Undergraduate%20student%20speaker%20Ritika%20Joshi" target="_blank" rel="noopener noreferrer" className="speech-button">Check out the highlights</a></p>
@@ -165,9 +163,10 @@ const PortfolioPage = () => {
                                 <p className="experience-timeline">September 2024 – Present</p>
                             </div>
                             <ul className="experience-bullets">
-                                <li>Led the integration of front-end features with back-end services, ensuring functionality aligned with user and stakeholder requirements</li>
-                                <li>Enhanced the user experience by creating a seamless data flow across critical web pages, aligning website performance with brand objectives and ensuring consistent cross-device accessibility</li>
-                                <li>Leveraged RESTful APIs, Figma for design, and WordPress, HTML, and CSS to build user-friendly and visually cohesive web pages that effectively communicate the brand’s mission and improve engagement</li>
+                                <li>Led the integration of front-end features with back-end services by developing and consuming RESTful APIs, ensuring seamless data flow and functionality</li>
+                                <li>Owned the integration of front-end features with back-end services by developing and consuming RESTful APIs, ensuring seamless data flow and functionality</li>
+                                <li>Deployed Figma, WordPress, HTML, and CSS to design and develop interfaces that enhanced usability, accessibility, and visual appeal</li>
+                                <li>Achieved a 15% increase in website traffic and improved user engagement metrics by elevating cross-device accessibility and implementing responsive designs</li>
                             </ul>
                         </div>
                     )}
@@ -205,8 +204,10 @@ const PortfolioPage = () => {
                                 <p className="experience-timeline">January 2022 – April 2022</p>
                             </div>
                             <ul className="experience-bullets">
-                                <li>Employed PowerBI for in-depth data analysis, implementing multi-time zone and daylight savings adjustments to ensure accurate insights across diverse datasets</li>
-                                <li>Developed a user-friendly Excel interface using VBA (Visual Basic for Applications), specifically tailored to optimize data entry processes and enhance efficiency within the warehouse operations, reducing data entry time by 40%</li>
+                                <li>Developed a multi-time zone analytics system integrated with a VBA-powered Excel interface, enhancing efficiency in global data entry workflows</li>
+                                <li>Designed and implemented dynamic data visualizations in Power BI, providing actionable insights to optimize warehouse operations</li>
+                                <li>Deployed automated testing frameworks using RESTful APIs and PyTest, ensuring the accuracy and reliability of analytics systems</li>
+                                <li>Streamlined warehouse data entry processes, achieving a 40% reduction in processing time and significantly boosting operational efficiency</li>
                             </ul>
                         </div>
                     )}
@@ -215,9 +216,26 @@ const PortfolioPage = () => {
 
 
             <section id="projects" className="section projects-section" ref={projectsRef}>
-    <h1>Projects</h1>
-    <div className="projects-grid">
+            <h1>Projects</h1>
+            <div className="projects-grid">
+            <div className="project-box">
+            <a target="_blank" rel="noopener noreferrer" className="project-link">
+                <FaGithub className="github-icon top-right" />
+            </a>
+            <div className="project-content">
+                <h2>Cinemate</h2>
+                <p>Discover and track your favorite movies with personalized recommendations and detailed insights, all in one sleek app.</p>
+                <p>Features include a customizable watchlist, movie trivia, interactive quizzes, and the ability to explore films by genre, actor, or director.</p>
+                <p className="tech-stack">
+                    <span>React</span>
+                    <span>JavaScript</span>
+                    <span>TypeScript</span>
+                    <span>Tailwind CSS</span>
+                    <span>TMDB API</span>
+                </p>
+            </div>
 
+        </div>
         <div className="project-box">
                 <a href="https://github.com/RJoshi141/matrix" target="_blank" rel="noopener noreferrer" className="project-link">
                     <FaGithub className="github-icon top-right" />
