@@ -219,8 +219,8 @@ const PortfolioPage = () => {
             <h1>Projects</h1>
             <div className="projects-grid">
             <div className="project-box">
-            <a target="_blank" rel="noopener noreferrer" className="project-link">
-                <FaGithub className="github-icon top-right" />
+            <a href="https://github.com/RJoshi141/cinemate" target="_blank" rel="noopener noreferrer" className="project-link">
+            <FaGithub className="github-icon top-right" />
             </a>
             <div className="project-content">
                 <h2>Cinemate</h2>
