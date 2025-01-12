@@ -237,6 +237,84 @@ const PortfolioPage = () => {
 
         </div>
         <div className="project-box">
+                <a href="https://github.com/RJoshi141/Capstone-Project" target="_blank" rel="noopener noreferrer" className="project-link">
+                    <FaGithub className="github-icon top-right" />
+                </a>
+                <div className="project-content">
+                    <h2>EventReady</h2>
+                    <p>This web application offers an easy-to-use platform that simplifies event management and creation.</p>
+                    <p>It provides a range of tools and resources to help aspiring event planners become proficient at organizing and budgeting for various events, making their entry into event planning smoother and more successful.</p>
+                    <p className="tech-stack">
+                        <span>JavaScript</span>
+                        <span>Django</span>
+                        <span>MUI</span>
+                        <span>React</span>
+                    </p>
+                </div>
+        </div>
+        <div className="project-box">
+            <a href="https://github.com/RJoshi141/KroDash" target="_blank" rel="noopener noreferrer" className="project-link">
+                <FaGithub className="github-icon top-right" />
+            </a>
+            <div className="project-content">
+                <h2>KroDash</h2>
+                <p>Built a Flask-based retail data dashboard on Heroku for efficient data processing.</p>
+                <p>Improved Kroger’s data analysis with visualizations, boosting decision-making and inventory management.</p>
+                <p className="tech-stack">
+                    <span>SQLAlchemy</span>
+                    <span>Azure PostgreSQL</span>
+                    <span>HTML</span>
+                    <span>Heroku</span>
+                    <span>JavaScript</span>
+                </p>
+            </div>
+        </div>
+        <div className="project-box">
+            <a href="https://github.com/RJoshi141/reddit-clone" target="_blank" rel="noopener noreferrer" className="project-link">
+                <FaGithub className="github-icon top-right" />
+            </a>
+            <div className="project-content">
+                <h2>Reddit Clone</h2>
+                <p>A Reddit-like website with functionalities including subreddit creation, post upvoting, and user profiles.</p>
+                <p>Users can interact by subscribing to subreddits, submitting posts, and engaging with comments</p>                
+                <p className="tech-stack">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Express</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </p>
+            </div>
+        </div>
+        
+        <div className="project-box">
+            <a href="https://github.com/RJoshi141/retro-snake-game" target="_blank" rel="noopener noreferrer" className="project-link">
+                <FaGithub className="github-icon top-right" />
+            </a>
+            <div className="project-content">
+                <h2>Retro Snake Game</h2>
+                <p>This repository features a classic Snake game implemented in Python using the Turtle graphics library and the freegames module.</p>
+                <p className="tech-stack">
+                    <span>Python</span>
+                    <span>Turtle Graphics</span>
+                    <span>Freegames Module</span>
+                </p>
+            </div>
+        </div>
+        <div className="project-box">
+            <a href="https://github.com/RJoshi141/meteor-shooter-game" target="_blank" rel="noopener noreferrer" className="project-link">
+                <FaGithub className="github-icon top-right" />
+            </a>
+            <div className="project-content">
+                <h2>Meteor Shooter Game</h2>
+                <p>In this classic arcade-style game, control a neon blue gun to shoot falling meteors. Larger meteors score more points, but missing too many ends the game.</p>
+                <p className="tech-stack">
+                    <span>Python</span>
+                    <span>Pygame</span>
+                </p>
+            </div>
+        </div>
+        <div className="project-box">
                 <a href="https://github.com/RJoshi141/matrix" target="_blank" rel="noopener noreferrer" className="project-link">
                     <FaGithub className="github-icon top-right" />
                 </a>
@@ -265,67 +343,6 @@ const PortfolioPage = () => {
                     <span>SASS</span>
                     <span>Node.js</span>
                     <span>Express</span>
-                </p>
-            </div>
-        </div>
-        <div className="project-box">
-            <a href="https://github.com/RJoshi141/reddit-clone" target="_blank" rel="noopener noreferrer" className="project-link">
-                <FaGithub className="github-icon top-right" />
-            </a>
-            <div className="project-content">
-                <h2>Reddit Clone</h2>
-                <p>A Reddit-like website with functionalities including subreddit creation, post upvoting, and user profiles.</p>
-                <p>Users can interact by subscribing to subreddits, submitting posts, and engaging with comments</p>                
-                <p className="tech-stack">
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>Express</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </p>
-            </div>
-        </div>
-        <div className="project-box">
-            <a href="https://github.com/RJoshi141/KroDash" target="_blank" rel="noopener noreferrer" className="project-link">
-                <FaGithub className="github-icon top-right" />
-            </a>
-            <div className="project-content">
-                <h2>KroDash</h2>
-                <p>Built a Flask-based retail data dashboard on Heroku for efficient data processing.</p>
-                <p>Improved Kroger’s data analysis with visualizations, boosting decision-making and inventory management.</p>
-                <p className="tech-stack">
-                    <span>SQLAlchemy</span>
-                    <span>Azure PostgreSQL</span>
-                    <span>HTML</span>
-                    <span>Heroku</span>
-                    <span>JavaScript</span>
-                </p>
-            </div>
-        </div>
-        <div className="project-box">
-            <a href="https://github.com/RJoshi141/retro-snake-game" target="_blank" rel="noopener noreferrer" className="project-link">
-                <FaGithub className="github-icon top-right" />
-            </a>
-            <div className="project-content">
-                <h2>Retro Snake Game</h2>
-                <p>This repository features a classic Snake game implemented in Python using the Turtle graphics library and the freegames module.</p>
-                <p className="tech-stack">
-                    <span>Python</span>
-                    <span>Turtle Graphics</span>
-                    <span>Freegames Module</span>
-                </p>
-            </div>
-        </div>
-        <div className="project-box">
-            <a href="https://github.com/RJoshi141/meteor-shooter-game" target="_blank" rel="noopener noreferrer" className="project-link">
-                <FaGithub className="github-icon top-right" />
-            </a>
-            <div className="project-content">
-                <h2>Meteor Shooter Game</h2>
-                <p>In this classic arcade-style game, control a neon blue gun to shoot falling meteors. Larger meteors score more points, but missing too many ends the game.</p>
-                <p className="tech-stack">
-                    <span>Python</span>
-                    <span>Pygame</span>
                 </p>
             </div>
         </div>
