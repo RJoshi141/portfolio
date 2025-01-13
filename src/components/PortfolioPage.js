@@ -234,7 +234,6 @@ const PortfolioPage = () => {
                     <span>TMDB API</span>
                 </p>
             </div>
-
         </div>
         <div className="project-box">
                 <a href="https://github.com/RJoshi141/Capstone-Project" target="_blank" rel="noopener noreferrer" className="project-link">
@@ -243,7 +242,7 @@ const PortfolioPage = () => {
                 <div className="project-content">
                     <h2>EventReady</h2>
                     <p>This web application offers an easy-to-use platform that simplifies event management and creation.</p>
-                    <p>It provides a range of tools and resources to help aspiring event planners become proficient at organizing and budgeting for various events, making their entry into event planning smoother and more successful.</p>
+                    <p>It provides a range of tools and resources to help aspiring event planners become proficient at organizing and budgeting for various events.</p>
                     <p className="tech-stack">
                         <span>JavaScript</span>
                         <span>Django</span>
@@ -286,7 +285,22 @@ const PortfolioPage = () => {
                 </p>
             </div>
         </div>
-        
+        <div className="project-box">
+            <a href="https://github.com/RJoshi141/skycast" target="_blank" rel="noopener noreferrer" className="project-link">
+                <FaGithub className="github-icon top-right" /></a>
+            <div className="project-content">
+                <h2>SkyCast</h2>
+                <p>Skycast is a sleek and user-friendly weather application designed to provide real-time weather information for any city around the world.</p>
+                <p>It offers a detailed city weather forecast, and parameters like temperature, humidity, & wind speed.</p>                
+                <p className="tech-stack">
+                    <span>Vercel</span>
+                    <span>React</span>
+                    <span>Axios</span>
+                    <span>OpenWeatherMap API</span>
+                    <span>JavaScript</span>
+                </p>
+            </div>
+        </div>
         <div className="project-box">
             <a href="https://github.com/RJoshi141/retro-snake-game" target="_blank" rel="noopener noreferrer" className="project-link">
                 <FaGithub className="github-icon top-right" />
@@ -346,8 +360,6 @@ const PortfolioPage = () => {
                 </p>
             </div>
         </div>
-
-        
         <div className="project-box">
             <a href="https://github.com/RJoshi141/portfolio" target="_blank" rel="noopener noreferrer" className="project-link">
                 <FaGithub className="github-icon top-right" />
@@ -378,10 +390,6 @@ const PortfolioPage = () => {
         </div>
     </div>
 </section>
-
-
-
-
 
 
 
