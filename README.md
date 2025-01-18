@@ -3,7 +3,7 @@
 **Hello and thanks for stopping by!** This repository houses my personal portfolio, a space where I showcase my skills, creativity, and favorite projects. It’s designed to be engaging, informative, and easy to navigate—perfect for anyone curious about my work or wanting to connect.
 
 ## 📚 Table of Contents
-1. [About the Portfolio](#about-the-portfolio)
+1. [About the Portfolio](#-About-the-Portfolio)
 2. [Features](#features)
 3. [Tech Stack](#tech-stack)
 4. [Getting Started](#getting-started)
